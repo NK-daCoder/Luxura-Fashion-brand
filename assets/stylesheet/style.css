@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ======================================== Navigation ========================================= */
+
+
+
+/* ======================================== Hero Section ========================================= */
+body {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+section {
+    border: 1px solid red;
+}
+
+div {
+    padding: 2em;
+    background-color: hsl(0, 0%, 13%);
+    color: white;
+    border-radius: 25px;
+    line-height: 1.5;
+    font-size: clamp(.6rem, 3vw, 1.25rem);
+}
+
+.vh {
+    height: 100vh;
+}

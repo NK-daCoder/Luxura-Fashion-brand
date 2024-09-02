@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    /* ================ if web is dark color ============ */
+    --text-color-pure-white: white;
+    --text-color-white-ver-2: hsla(0, 0%, 100%, 0.849);
+    --text-color-white-ver-3: hsla(0, 0%, 100%, 0.733);
+    --text-color-white-ver-4: hsla(0, 0%, 100%, 0.733);
+
+    /* ================ if web is white color =============== */
+    --text-color-pure-black: black;
+    --text-color-ver-2: hsl(0, 0%, 9%);
+    --text-color-ver-3: hsl(0, 0%, 15%);
+    --text-color-ver-4: hsl(0, 0%, 19%);
+}
+
+/* =================================== Font-Face ==================================== */
+
+/* font-weight: Use a value from 100 to 900 to make font bolder */
+
+.montserrat-paragraph {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: Garamond;
+    src: url("../fonts/title-font/EBGaramond-Medium.woff");
+}
+
+.garamond-title {
+    font-family: Garamond, 'Times New Roman', Times, serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    letter-spacing: 1px
+}
+
+/* =================================== Text Color ===================================== */
+.text-color--white {
+    color: var(--text-color-pure-white);
+}
+
+.text-color--dark {
+    color: var(--text-color-pure-black);
+}
+
+/* =================================== Layout ===================================== */
+
+.fixed-width-layout {
+    max-width: 1250px;
+    margin-inline: auto;
+    padding: .5em;
+}
+
+.two-col-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 760px) {
+    .two-col-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =================== Unique-Grids ===================== */
+
+.grid--three-col-two-row-ver-1, 
+.grid--three-col-two-row-ver-2,
+.grid--three-col-two-row-ver-3 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 760px) {
+
+    .grid--three-col-two-row-ver-1 {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "img-1 img-2 img3"
+        "img-1 img-4 img-5"
+        ;
+    }
+
+    .grid--three-col-two-row-ver-2 {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "img-2 img-1 img3"
+        "img-4 img-1 img-5"
+        ;
+    }
+
+    .grid--three-col-two-row-ver-3 {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "img-2 img-3 img1"
+        "img-4 img-5 img-1"
+        ;
+    }
+}
+
+
+
+.flex--align-all-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =================================== Animations ===================================== */
+
+/* Animation on load
+
+    div {
+        animation: come-from-left linear 1s;
+        animation-delay: 1s;
+    }
+*/
+
+/*
+    div {
+        animation: fade-in linear both;
+        animation-timeline: view();
+        animation-range: cover 0% cover 45%;
+
+        -moz-animation: fade-in linear both;
+       
+    }
+*/
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        /* scale: x y*/
+        scale: 0 1;
+    }
+    to {
+        opacity: 1;
+        scale: 1 1;
+    }
+}
+
+@keyframes come-from-left {
+    from {
+        opacity: 0;
+        position: relative;
+        left: -1000px;
+    }
+    to {
+        opacity: 1;
+        left: 1000px;
+    }
+}
+
+@keyframes animate-in-and-out {
+    /* Element enter from bottom*/
+	entry 0%  {
+		opacity: 0; 
+        transform: translateY(100%);
+	}
+	entry 100%  {
+		opacity: 1; 
+        transform: translateY(0);
+	}
+
+    /* Element exit from top*/
+	exit 0% {
+		opacity: 1; 
+        transform: translateY(0);
+	}
+	exit 100% {
+		opacity: 0; 
+        transform: translateY(-100%);
+	}
+}
+
