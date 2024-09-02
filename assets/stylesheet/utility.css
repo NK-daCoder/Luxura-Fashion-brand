@@ -22,8 +22,9 @@
 .montserrat-paragraph {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 100;
+  font-weight: 500;
   font-style: normal;
+  font-size: clamp(.5rem, 5vw, .9rem);
 }
 
 @font-face {
@@ -35,7 +36,7 @@
     font-family: Garamond, 'Times New Roman', Times, serif;
     font-optical-sizing: auto;
     font-weight: 700;
-    letter-spacing: 1px
+    letter-spacing: 1px;
 }
 
 /* =================================== Text Color ===================================== */
@@ -50,10 +51,16 @@
 /* =================================== Layout ===================================== */
 
 .fixed-width-layout {
-    max-width: 1250px;
+    width: 1250px;
     margin-inline: auto;
-    padding: .5em;
 }
+
+@media (max-width: 1254px) {
+    .fixed-width-layout {
+        width: 100%;
+    }
+}
+
 
 .two-col-grid {
     display: grid;
@@ -105,12 +112,29 @@
     }
 }
 
+.flex--space-between {
+    display: flex;
+    justify-content: space-between;
+}
 
+.flex--space-between--2em--gap {
+    display: flex;
+    gap: 2em;
+}
 
 .flex--align-all-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* ================================== Lists and links =========================================== */
+.ul--list-style--no-hyperlink > li {
+    list-style-type: none;
+}
+
+.no-hyperlink, .ul--list-style--no-hyperlink > li a {
+    text-decoration: none;
 }
 
 /* =================================== Animations ===================================== */
@@ -129,8 +153,7 @@
         animation-timeline: view();
         animation-range: cover 0% cover 45%;
 
-        -moz-animation: fade-in linear both;
-       
+        -moz-animation: fade-in linear both;   
     }
 */
 

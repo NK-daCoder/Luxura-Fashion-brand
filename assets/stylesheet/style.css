@@ -4,31 +4,76 @@
     box-sizing: border-box;
 }
 
+
 /* ======================================== Navigation ========================================= */
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-button {
+    order: 2;
+    display: inline-block;
+}
+
+.navigation-main {
+    border: 1px solid red;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+}
+
+.navigation-primary {
+    position: fixed;
+    top: 75px;
+}
+
+.navigation-primary--show {
+    display: block;
+}
+
+.brand-logo {
+    order: 2;
+}
+
+.sign-up {
+    order: 3;
+    width: 19px;
+    height: 19px;
+}
+
+@media (min-width: 790px) {
+    .nav-button {
+        display: none;
+    }
+
+    .nav__ul-two {
+        display: flex;
+        justify-content: space-between;
+        gap: 2em;
+    }
+
+    .navigation-primary {
+        position: relative;
+        display: block;
+        top: 0;
+    }
+
+    .brand-logo {
+        order: 1;
+    }
+
+    .navigation-primary {
+        order: 2;
+    }
+
+    .navigation__store {
+        order: 3;
+    }
+}
+
+
 
 
 
 /* ======================================== Hero Section ========================================= */
-body {
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-}
-
-section {
-    border: 1px solid red;
-}
-
-div {
-    padding: 2em;
-    background-color: hsl(0, 0%, 13%);
-    color: white;
-    border-radius: 25px;
-    line-height: 1.5;
-    font-size: clamp(.6rem, 3vw, 1.25rem);
-}
-
-.vh {
-    height: 100vh;
-}
