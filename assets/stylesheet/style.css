@@ -2,34 +2,70 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /*
+        allows for smooth scrolling especially when links are clicked and has 
+        to go to a particular section of the page 
+    */
+    scroll-behavior: smooth;
 }
 
+:root {
+    --background-blur: 20px;
+    --consistant-padding: 1.2em;
+    --grid-width-height-container-images: 100%;
+    --grid-gap: .5em;
+    
+}
 
 /* ======================================== Navigation ========================================= */
 .header {
     display: flex;
     justify-content: center;
+    z-index: 100;
+}
+
+#nav-bar {
+    background-color: hsla(0, 0%, 0%, 0);
+    backdrop-filter: blur(var(--background-blur));
+    -webkit-backdrop-filter: blur(var(--background-blur));
+    transition: background-color .5s ease-in-out;
 }
 
 .nav-button {
     order: 2;
     display: inline-block;
+    width: 35px;
+    height: 22px;
+
+    background: none;
+    border: none;
+   
 }
 
 .navigation-main {
-    border: 1px solid red;
     padding: 1em;
     position: fixed;
     top: 0;
+    width: 100%;
 }
 
 .navigation-primary {
     position: fixed;
-    top: 75px;
+    right: -1000px;
+    top: 55px;
+    height: 100vh;
+    padding: 1em;
+
+    width: 100vw;
+
+    backdrop-filter: blur(var(--background-blur));
+    -webkit-backdrop-filter: blur(var(--background-blur));
+
+    transition: right .5s ease-out;
 }
 
-.navigation-primary--show {
-    display: block;
+.navigation-primary--right-position-transitions {
+    right: 0;
 }
 
 .brand-logo {
@@ -42,7 +78,35 @@
     height: 19px;
 }
 
+.nav-icon {
+    width: 90%;
+    height: 80%;
+}
+
+.navigation-store__ecomerce-cart {
+    display: flex;
+    gap: .5em;
+}
+
+.navigation-background--black {
+    background-color: black;
+    color: white;
+}
+
+.navigation-background--default {
+    background-color: none;
+    color: white;
+}
+
+
+
 @media (min-width: 790px) {
+
+    .navigation-primary, #nav-bar  {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+    
     .nav-button {
         display: none;
     }
@@ -50,13 +114,33 @@
     .nav__ul-two {
         display: flex;
         justify-content: space-between;
-        gap: 2em;
+        gap: 2em; 
+    }
+
+    .nav__ul-two > li a {
+        border-bottom: 1px solid hsla(0, 0%, 100%, 0);
+        padding-bottom: 0em;
+        transition: border-bottom .2s ease-in-out, padding-bottom .2s ease-in-out;
+    }
+
+    .nav__ul-two > li a:hover {
+        padding-bottom: .2em;
+        border-bottom: 1px solid white;
     }
 
     .navigation-primary {
         position: relative;
         display: block;
         top: 0;
+        right: 0;
+        height: 0;
+        padding: 0;
+        transition: none;
+        width: 500px;
+    }
+
+    .navigation-primary--right-position-transitions {
+        right: 0;
     }
 
     .brand-logo {
@@ -73,7 +157,249 @@
 }
 
 
+/* ======================================== Main ========================================= */
 
-
+.main {
+    position: relative;
+}
 
 /* ======================================== Hero Section ========================================= */
+
+.hero-section {
+    height: 100vh;
+
+    background-image: url("../../assets/images/home-page/hero-section/images/hero-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: hsla(0, 0%, 0%, 0.411);
+    background-blend-mode: color-burn;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.hero-section__heading {
+    position: relative;
+    
+    text-align: center;
+    width: 100%;
+    padding: .2em;
+    text-shadow: 1px 1px 10px black;
+}
+
+
+
+@media (min-width: 950px) {
+    .hero-section__heading {
+        top: 5em;
+        font-size: clamp(1rem, 5vw, 3rem);
+        width: 80%;
+    }
+}
+
+/* ======================================== Our-Story Section ========================================= */
+
+.our-story {
+    justify-content: center;
+    align-content: center; 
+    gap: 2em;
+    padding-top: var(--consistant-padding);
+}
+
+.our-story__image-section {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-template-areas: 
+    "img-1 img-1 img-1 img-2 img-2 img-2 img-4 img-4 img-4 img-4"
+    "img-1 img-1 img-1 img-3 img-3 img-3 img-4 img-4 img-4 img-4"
+    "img-1 img-1 img-1 img-3 img-3 img-3 img-5 img-5 img-5 img-5"
+    ;
+    gap: var(--grid-gap);
+    height: 350px;
+    padding-bottom: var(--consistant-padding);
+}
+
+
+.our-story__image {
+    width: var(--grid-width-height-container-images);
+    height: var(--grid-width-height-container-images);
+    object-fit: cover;
+    border-radius: 5px;
+    order: 1;
+}
+
+.our-story__image-1 {
+    grid-area: img-1;
+}
+
+.our-story__image-2 {
+    grid-area: img-2;
+}
+
+.our-story__image-3 {
+    grid-area: img-3;
+}
+
+.our-story__image-4 {
+    grid-area: img-4;
+}
+
+.our-story__image-5 {
+    grid-area: img-5;
+}
+
+.our-story__text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+
+.our-story-text-section__heading {
+    padding-bottom: 16px;
+    font-size: clamp(1rem, 10vw, 3rem);
+    text-align: center;
+}
+
+.our-story-text-section__paragraphy {
+    font-size: clamp(.2rem, 10vw, 2rem);
+}
+
+.our-story__text-section-two {
+    order: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-story__image-section-two {
+    order: 3;
+}
+
+.our-story__text-section-two,
+.our-story__image-section-two {
+    padding-bottom: var(--consistant-padding); 
+}
+
+.our-story__image-section-two {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-areas: 
+    "img-1 img-1 ..."
+    "img-2 img-3 ..."
+    ;
+    
+    gap: var(--grid-gap);
+    height: 500px;
+
+    padding-top: var(--consistant-padding);
+
+}
+
+.our-story-section-two__img, .our-story-section-three__img {
+    width: var(--grid-width-height-container-images);
+    height: var(--grid-width-height-container-images);
+    object-fit: cover;
+    aspect-ratio: 1;
+    border-radius: 20px;
+}
+
+.our-story-section-two__img-1 {
+    grid-area: img-1;
+}
+
+.our-story-section-two__img-2 {
+    grid-area: img-2;
+}
+
+.our-story-section-two__img-3 {
+    grid-area: img-3;
+}
+
+.our-story__text-section-three {
+    order: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: var(--consistant-padding);
+    padding-bottom: var(--consistant-padding);
+}
+
+.our-story__image-section-three {
+    padding-top: var(--consistant-padding);
+    padding-bottom: var(--consistant-padding);
+    order: 4;
+    height: 250px;
+}
+
+@media (min-width: 970px) {
+    .our-story__image-section {
+        height: 450px;
+    }
+
+    .our-story-text-section__paragraphy {
+        width: 450px;
+    }
+
+    .our-story__text-section-two {
+        order: 3;
+    }
+
+    .our-story__image-section-two {
+        order: 4;
+    }
+
+    .our-story__image-section-three {
+        height: 450px;
+    }
+}
+
+/* ======================================== Our finest works ========================================= */
+
+.our-finest-works {
+    background-color: hsl(0, 0%, 76%);
+    height: auto;
+}
+
+.our-finest-works__heading {
+    text-align: center;
+    padding-top: var(--consistant-padding);
+    padding-bottom: var(--consistant-padding);
+}
+
+.our-finest-works__ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    padding-bottom: var(--consistant-padding);
+}
+
+.our-finest-works-ul__card {
+    background-color: white;
+    width: 285px;
+    border-radius: 20px;
+    border: 1px solid red;
+}
+
+@media (min-width: 760px) {
+    .our-finest-works__ul {
+        width: 450px;
+    }
+}
+/* ======================================== Meet The Team ========================================= */
+

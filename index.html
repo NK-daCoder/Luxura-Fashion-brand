@@ -8,29 +8,94 @@
     <title>Luxura</title>
 </head>
 <body>
-    <header class="header header header-fixed--top">
-        <nav class="navigation-main flex--space-between fixed-width-layout">
-            <a href="" class="garamond-title no-hyperlink brand-logo text-color--dark">LUXURA</a>
-            <button class="nav-button">Menu</button>
-            <nav class="navigation-primary navigation-primary--hidden">
-                <ul class="nav__ul-two text-color--dark ul--list-style--no-hyperlink montserrat-paragraph">
-                    <li><a href="">Our Story</a></li>
-                    <li><a href="">Our Services</a></li>
-                    <li><a href="">Our Team</a></li>
-                    <li><a href="">Our Shop</a></li>
+    <header class="navigation-main header header header-fixed--top" id="nav-bar">
+        <nav class="flex--space-between fixed-width-layout">
+            <a href="" class="garamond-title no-hyperlink brand-logo text-color--white">LUXURA</a>
+            <button class="nav-button" id="menu-btn"><img src="./assets/images/icons/mobile-nav.svg" alt="" class="nav-icon" arial-label="navigation-button-icon"/></button>
+            <nav class="navigation-primary" id="navigation">
+                <ul class="nav__ul-two text-color--white ul--list-style--no-hyperlink montserrat-paragraph navigation-background--default" id="main-nav__ul">
+                    <li><a href="#our-story" class="text-color--white" id="nav-link-item">Our Story</a></li>
+                    <li><a href="" class="text-color--white" id="main__nav-link-item">Our Team</a></li>
+                    <li><a href="" class="text-color--white" id="main__nav-link-item">Our Shop</a></li>
+                    <li><a href="" class="text-color--white" id="main__nav-link-item">Our Services</a></li>
                 </ul>
             </nav>
             <nav class="navigation__store">
-                <ul class="ul--list-style--no-hyperlink">
+                <ul class="ul--list-style--no-hyperlink navigation-store__ecomerce-cart">
                     <li>
                         <a href="">
-                            <img src="./assets/images/icons/user-login.svg" alt="" class="sign-up"/>
+                            <img src="./assets/images/icons/shopping-cart.svg" alt="" class="sign-up"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./assets/images/icons/user-login-white.svg" alt="" class="sign-up"/>
                         </a>
                     </li>
                 </ul>
             </nav>
         </nav>
     </header>
+
+    <main class="main">
+        <section class="hero-section" id="hero-section">
+            <h1 class="text-color--white garamond-title hero-section__heading">Elevate your wardrobe with Luxura Fashion</h1>
+        </section>
+        <section class="our-story two-col-grid fixed-width-layout" id="our-story">
+            <section class="our-story__text-section">
+                <h1 class="our-story-text-section__heading garamond-title">Our Story</h1>
+                <p class="montserrat-paragraph our-story-text-section__paragraphy">
+                    Founded on the principles of luxury and exclusivity, Luxura Fashion is more than just a brand it’s a legacy. We believe in creating fashion that transcends trends, offering our discerning clientele timeless pieces that speak of elegance, quality, and sophistication. Each garment is a testament to our commitment to craftsmanship and our passion for the art of fashion.”
+                </p>
+            </section>
+            <section class="our-story__image-section">
+                <img src="./assets/images/home-page/why-choose-us/about-img-gallery/gigi-hadid.jpg" class="our-story__image our-story__image-1"/>
+                <img src="./assets/images/home-page/why-choose-us/about-img-gallery/men-in-suit.jpg" class="our-story__image our-story__image-2"/>
+                <img src="./assets/images/home-page/why-choose-us/about-img-gallery/holo-gram-2.jpg" class="our-story__image our-story__image-3"/>
+                <img src="./assets/images/home-page/why-choose-us/about-img-gallery/make-up-1.jpg" class="our-story__image our-story__image-4"/>
+                <img src="./assets/images/home-page/why-choose-us/about-img-gallery/makeup-photoshoot.jpg" class="our-story__image our-story__image-5"/>
+            </section>
+            <section class="our-story__text-section-two">
+                <h1 class="our-story-text-section__heading garamond-title">Craftsmanship</h1>
+                <p class="montserrat-paragraph our-story-text-section__paragraphy">
+                    At Luxura Fashion, we take pride in our meticulous attention to detail. Our designs are brought to life by master artisans who pour their heart and soul into every stitch, ensuring that each piece is a work of art. From the selection of the finest fabrics to the intricate finishing touches, our commitment to quality is unwavering.
+                </p>
+            </section>
+            <section class="our-story__image-section-two">
+                <img src="assets/images/home-page/why-choose-us/about-img-gallery/make-up-artist.jpg" class="our-story-section-two__img our-story-section-two__img-1"/>
+                <img src="assets/images/home-page/why-choose-us/about-img-gallery/fashion-designer-working.jpg" class="our-story-section-two__img our-story-section-two__img-2"/>
+                <img src="assets/images/home-page/why-choose-us/about-img-gallery/fashion-photography-500x500.webp" class="our-story-section-two__img our-story-section-two__img-3"/>
+            </section>
+
+            <section class="our-story__text-section-three">
+                <h1 class="our-story-text-section__heading garamond-title">Our Philosophy</h1>
+                <p class="montserrat-paragraph our-story-text-section__paragraphy">
+                    Luxury is not just about opulence; it’s about an experience. We strive to create an environment where our clients feel valued, indulged, and inspired. Our exclusive collections are crafted for those who appreciate the finer things in life and seek to express their individuality through fashion.
+                </p>
+            </section>
+            <section class="our-story__image-section-three">
+                <img src="assets/images/home-page/why-choose-us/about-img-gallery/pholisophy.jpg" class="our-story-section-three__img">
+            </section>
+        </section>
+
+        <section class="our-finest-works">
+            <h1 class="garamond-title fixed-width-layout our-finest-works__heading">Our Finest Works</h1>
+            <ul class="fixed-width-layout our-finest-works__ul ul--list-style--no-hyperlink ">
+                <li class="our-finest-works-ul__card">
+                    
+                </li>
+                <li class="our-finest-works-ul__card">
+                    
+                </li>
+                <li class="our-finest-works-ul__card">
+                    
+                </li>
+            </ul>
+        </section>
+    </main>
+    
+
+
     <script src="./script.js"></script>
 </body>
 </html>

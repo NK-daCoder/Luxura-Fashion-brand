@@ -15,6 +15,26 @@
     --text-color-ver-4: hsl(0, 0%, 19%);
 }
 
+/* =================================== displays ==================================== */
+
+.display-hidden {
+    display: none;
+}
+
+.display-show {
+    display: block;
+}
+
+/* ========= For desktop ========== */
+
+@media (min-width: 760px) {
+    .display-hidden, .display-show {
+        display: block;
+    }
+}
+
+
+
 /* =================================== Font-Face ==================================== */
 
 /* font-weight: Use a value from 100 to 900 to make font bolder */
@@ -25,6 +45,7 @@
   font-weight: 500;
   font-style: normal;
   font-size: clamp(.5rem, 5vw, .9rem);
+  letter-spacing: .8px;
 }
 
 @font-face {
@@ -37,6 +58,7 @@
     font-optical-sizing: auto;
     font-weight: 700;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 /* =================================== Text Color ===================================== */
@@ -57,7 +79,7 @@
 
 @media (max-width: 1254px) {
     .fixed-width-layout {
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -129,6 +151,7 @@
 }
 
 /* ================================== Lists and links =========================================== */
+
 .ul--list-style--no-hyperlink > li {
     list-style-type: none;
 }
@@ -136,6 +159,10 @@
 .no-hyperlink, .ul--list-style--no-hyperlink > li a {
     text-decoration: none;
 }
+
+/* ================================== Lists and links =========================================== */
+
+
 
 /* =================================== Animations ===================================== */
 
@@ -203,4 +230,5 @@
         transform: translateY(-100%);
 	}
 }
+
 
