@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/stylesheet/style.css"/>
     <link rel="stylesheet" href="./assets/stylesheet/utility.css"/>
     <title>Luxura</title>
@@ -11,13 +12,13 @@
     <header class="navigation-main header header header-fixed--top" id="nav-bar">
         <nav class="flex--space-between fixed-width-layout">
             <a href="" class="garamond-title no-hyperlink brand-logo text-color--white">LUXURA</a>
-            <button class="nav-button" id="menu-btn"><img src="./assets/images/icons/mobile-nav.svg" alt="" class="nav-icon" arial-label="navigation-button-icon"/></button>
+            <button class="nav-button" id="menu-btn"><img src="./assets/images/icons/mobile-nav.svg" alt="" class="nav-icon" arial-label="sign up button"/></button>
             <nav class="navigation-primary" id="navigation">
                 <ul class="nav__ul-two text-color--white ul--list-style--no-hyperlink montserrat-paragraph navigation-background--default" id="main-nav__ul">
                     <li><a href="#our-story" class="text-color--white" id="nav-link-item">Our Story</a></li>
-                    <li><a href="" class="text-color--white" id="main__nav-link-item">Our Team</a></li>
+                    <li><a href="#meet-the-team" class="text-color--white" id="main__nav-link-item">Our Team</a></li>
                     <li><a href="" class="text-color--white" id="main__nav-link-item">Our Shop</a></li>
-                    <li><a href="" class="text-color--white" id="main__nav-link-item">Our Services</a></li>
+                    <li><a href="#our-services" class="text-color--white" id="main__nav-link-item">Our Services</a></li>
                 </ul>
             </nav>
             <nav class="navigation__store">
@@ -44,7 +45,7 @@
         <section class="our-story two-col-grid fixed-width-layout" id="our-story">
             <section class="our-story__text-section">
                 <h1 class="our-story-text-section__heading garamond-title">Our Story</h1>
-                <p class="montserrat-paragraph our-story-text-section__paragraphy">
+                <p class="montserrat-paragraph our-story-text-section__paragraphy text-color--dark-2">
                     Founded on the principles of luxury and exclusivity, Luxura Fashion is more than just a brand it’s a legacy. We believe in creating fashion that transcends trends, offering our discerning clientele timeless pieces that speak of elegance, quality, and sophistication. Each garment is a testament to our commitment to craftsmanship and our passion for the art of fashion.”
                 </p>
             </section>
@@ -57,7 +58,7 @@
             </section>
             <section class="our-story__text-section-two">
                 <h1 class="our-story-text-section__heading garamond-title">Craftsmanship</h1>
-                <p class="montserrat-paragraph our-story-text-section__paragraphy">
+                <p class="montserrat-paragraph our-story-text-section__paragraphy text-color--dark-2">
                     At Luxura Fashion, we take pride in our meticulous attention to detail. Our designs are brought to life by master artisans who pour their heart and soul into every stitch, ensuring that each piece is a work of art. From the selection of the finest fabrics to the intricate finishing touches, our commitment to quality is unwavering.
                 </p>
             </section>
@@ -69,31 +70,215 @@
 
             <section class="our-story__text-section-three">
                 <h1 class="our-story-text-section__heading garamond-title">Our Philosophy</h1>
-                <p class="montserrat-paragraph our-story-text-section__paragraphy">
+                <p class="montserrat-paragraph our-story-text-section__paragraphy text-color--dark-2">
                     Luxury is not just about opulence; it’s about an experience. We strive to create an environment where our clients feel valued, indulged, and inspired. Our exclusive collections are crafted for those who appreciate the finer things in life and seek to express their individuality through fashion.
                 </p>
             </section>
+
             <section class="our-story__image-section-three">
                 <img src="assets/images/home-page/why-choose-us/about-img-gallery/pholisophy.jpg" class="our-story-section-three__img">
             </section>
         </section>
-
+        <div class="div--spacing"></div>
         <section class="our-finest-works">
-            <h1 class="garamond-title fixed-width-layout our-finest-works__heading">Our Finest Works</h1>
+            <h1 class="garamond-title fixed-width-layout our-finest-works__heading">Our Finest Works Of Art</h1>
             <ul class="fixed-width-layout our-finest-works__ul ul--list-style--no-hyperlink ">
                 <li class="our-finest-works-ul__card">
-                    
+                    <img src="./assets/images/home-page/our-finest-works/purple-guy-removebg-preview.png" alt="" arial-label="" class="div__image"/>
+                    <h2 class="our-services__card-heading garamond-title">Purple Gentlemen's Tuxedo</h2>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">
+                        From the ballroom to that high-stakes gala, the Purple Gentlemen's Tuxedo is all about elegance with a bold twist. The deep, regal purple commands attention while the tailored fit exudes confidence. Pair this with a crisp white shirt and your smoothest moves, and you're set to be the best-dressed in any room!
+                    </p>
+                    <a href="" class="our-finest-works-ul-card__btn montserrat-paragraph">Shop Now!</a>
                 </li>
                 <li class="our-finest-works-ul__card">
-                    
+                    <img src="./assets/images/home-page/our-finest-works/Satin-faux-wrap-gown-removebg-preview.png" alt="" arial-label="" class="div__image"/>
+                    <h2 class="our-services__card-heading garamond-title">Satin Faux-Wrap <br>Gown</h2>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">
+                        The Satin Faux-Wrap Gown is pure elegance with a touch of seductive flow. This beauty wraps you up in luxury, hugging all the right curves while maintaining that chic, sophisticated look. Whether it's a red-carpet event or a moonlit evening, this gown will have you gliding through the night with effortless grace.
+                    </p>
+                    <a href="" class="our-finest-works-ul-card__btn montserrat-paragraph">Shop Now!</a>
                 </li>
                 <li class="our-finest-works-ul__card">
-                    
+                    <img src="./assets/images/home-page/our-finest-works/Prince_Aristocrat_Retro_Vintage_Rococo_Medieval_18th_Century_Coat_Outfits_Suit_Trouble-removebg-preview.png" alt="" arial-label="" class="div__image"/>
+                    <h2 class="our-services__card-heading garamond-title">Prince Aristocrat Retro</h2>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">
+                        Step into a different era with the Prince Aristocrat Retro Vintage Rococo Suit, straight out of a royal wardrobe! Inspired by the grandeur of the 18th century, this lavish coat brings back the opulence of the Rococo era. Ideal for costume parties or simply when you're feeling a bit extra – after all, history never looked this good!
+                    </p>
+                    <a href="" class="our-finest-works-ul-card__btn montserrat-paragraph">Shop Now!</a>
                 </li>
             </ul>
         </section>
+        <div class="div--spacing"></div>
+        <section class="our-services fixed-width-layout" id="our-services">
+            <h1 class="our-services__heading garamond-title">Our Services</h1>
+            <ul class="our-services__ul ul--list-style--no-hyperlink">
+                <li class="our-services__card our-services__card-1">
+                    <img src="./assets/images/home-page/our-services/personal-styling.webp" alt="" aria-label="" class="our-services-card__image"/>
+                    <h1 class="our-services__card-heading garamond-title">Personal Styling</h1>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">"Why settle for off-the-rack when you can have a masterpiece crafted just for you?"</p>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">For the true connoisseurs of style, we offer bespoke tailoring that fits you like a second skin. Whether it's a luxurious tuxedo or a stunning evening gown, our tailors will take your measurements and craft a custom piece that's designed to flatter every inch. At Luxura, we don't just make clothes – we create wearable art.</p>
+                    <a href="" class="montserrat-paragraph our-services__link">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        Book Now!
+                    </a>
+                </li>
+                <li class="our-services__card our-services__card-2">
+                    <img src="./assets/images/home-page/our-services/personal-touch.jpg" alt="" aria-label="" class="our-services-card__image"/>
+                    <h1 class="our-services__card-heading garamond-title">Custom Tailoring & Bespoke Designs</h1>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">"Why settle for off-the-rack when you can have a masterpiece crafted just for you?"</p>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">For the true connoisseurs of style, we offer bespoke tailoring that fits you like a second skin. Whether it's a luxurious tuxedo or a stunning evening gown, our tailors will take your measurements and craft a custom piece that's designed to flatter every inch. At Luxura, we don't just make clothes – we create wearable art.</p>
+                    <a href="" class="montserrat-paragraph our-services__link">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        Book Now!
+                    </a>
+                </li>
+                <li class="our-services__card our-services__card-3">
+                    <img src="./assets/images/home-page/our-services/styling-consultant.jpg" alt="" aria-label="" class="our-services-card__image"/>
+                    <h1 class="our-services__card-heading garamond-title">Wardrobe Consultations</h1>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">"Why settle for off-the-rack when you can have a masterpiece crafted just for you?"</p>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">For the true connoisseurs of style, we offer bespoke tailoring that fits you like a second skin. Whether it's a luxurious tuxedo or a stunning evening gown, our tailors will take your measurements and craft a custom piece that's designed to flatter every inch. At Luxura, we don't just make clothes – we create wearable art.</p>
+                    <a href="" class="montserrat-paragraph our-services__link">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        Book Now!
+                    </a>
+                </li>
+                <li class="our-services__card our-services__card-1">
+                    <img src="./assets/images/home-page/our-services/makeup.jpg" alt="" aria-label="" class="our-services-card__image"/>
+                    <h1 class="our-services__card-heading garamond-title">Makeup Artistry – Glamour in Every Brushstroke</h1>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">"Because darling, the perfect look deserves the perfect face!"</p>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">Our professional makeup artists will ensure you're red-carpet ready from head to toe. Whether it’s a soft, elegant glow or bold, dramatic flair, we craft makeup looks that highlight your best features and complement your Luxura outfit. Trust us, darling, you’ll be camera-ready in no time!</p>
+                    <a href="" class="montserrat-paragraph our-services__link">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        Book Now!
+                    </a>
+                </li>
+                <li class="our-services__card our-services__card-2">
+                    <img src="./assets/images/home-page/our-services/photography.jpg" alt="" aria-label="" class="our-services-card__image"/>
+                    <h1 class="our-services__card-heading garamond-title">Fashion Photography – Capture Your Luxura Moment</h1>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">"Ready for your close-up? Strike a pose!"</p>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">Our photography service ensures your Luxura look is captured in all its glory. Whether it's for personal keepsakes or the 'Gram, our fashion photographers will make sure you’re immortalized in style. You’ll have your very own high-fashion photoshoot, where the only thing more stunning than the backdrop is you.</p>
+                    <a href="" class="montserrat-paragraph our-services__link">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        Book Now!
+                    </a>
+                </li>
+                <li class="our-services__card our-services__card-3">
+                    <img src="./assets/images/home-page/our-services/virtual-classes.jpg" alt="" aria-label="" class="our-services-card__image"/>
+                    <h1 class="our-services__card-heading garamond-title">Virtual Styling for Global Clients</h1>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">"Can’t make it to our boutique? No worries – we’ll bring the style to you!"</p>
+                    <p class="montserrat-paragraph our-services__card-para text-color--dark-2">For our fashionistas across the globe, we offer virtual styling sessions. Via video call, our expert stylists will help you select the perfect outfits, offer style tips, and even guide you through custom orders – all from the comfort of your home.</p>
+                    <a href="" class="montserrat-paragraph our-services__link">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        Book Now!
+                    </a>
+                </li>
+            </ul>
+            <div class="div--spacing"></div>
+        </section>
+        <div class="div--spacing"></div>
+        <section class="team-members-section fixed-width-layout" id="meet-the-team">
+            <h1 class="team-members-section__heading garamond-title">Meet Your Fashion Stylist</h1>
+            <ul class="team-members__ul ul--list-style--no-hyperlink">
+                <li>
+                    <img src="./assets/images/home-page/meet-the-team/peter.jpg" aria-label="" alt="" class="team-members-profile"/>
+                    <h2></h2>
+                </li>
+                <li>
+                    <img src="./assets/images/home-page/meet-the-team/michael-burrows.jpeg" aria-label="" alt="" class="team-members-profile"/>
+                    <h2></h2>
+                </li>
+                <li>
+                    <img src="./assets/images/home-page/meet-the-team/poppy-make-up-artist.jpg" aria-label="" alt="" class="team-members-profile"/>
+                    <h2></h2>
+                </li>
+                <li>
+                    <img src="./assets/images/home-page/meet-the-team/style-theorist-amy-roberts.webp" aria-label="" alt="" class="team-members-profile"/>
+                    <h2></h2>
+                </li>
+                <li>
+                    <img src="./assets/images/home-page/meet-the-team/style-theorist-matpat.jpg" aria-label="" alt="" class="team-members-profile"/>
+                    <h2></h2>
+                </li>
+                <li>
+                    <img src="./assets/images/home-page/meet-the-team/priscilla-ono-make-up-artist.webp" aria-label="" alt="" class="team-members-profile"/>
+                    <h2></h2>
+                </li>
+            </ul>
+        </section>
+        <div class="div--spacing"></div>
+        <section class="testamonials-section fixed-width-layout">
+            <h1 class="garamond-title testamonials-section__heading">Don't take our word for it, just ask our testamonials</h1>
+
+            <ul class="testamonial-section__ul">
+                <li class="testamonial-section__list-item">
+                    <h1 class="testamonial-section-list__heading montserrat-paragraph text-color--dark-2">
+                        "I needed something unforgettable for the Met Gala. Luxura didn’t just deliver – they redefined glamour. I’ve never felt more confident and comfortable."
+                    </h1>
+                    <section class="testamonial-image-section">
+                        <img src="./assets/images/home-page/testamonials/zama-mthethwa.jpg" alt="" aria-label="" class="testamonial-section-profiles"/>
+                    </section>
+                    <p class="testamonial-section-list__para montserrat-paragraph">Zama Mthethwa, <br>Award-Winning Actress & Style Icon</p>
+                </li>
+
+            </ul>
+        </section>
+        <div class="div--spacing"></div>
+        <section class="news-letter-section">
+            <form class="fixed-width-layout news-letter-section__form">
+                <label for="news-letter" class="garamond-title news-letter-section-form__label">Sign Up to our newsletter</label>
+                <input id="news-letter" type="email" placeholder="Email" class="news-letter-section-form__input"/>
+
+                <button type="submit" class="our-finest-works-ul-card__btn news-letter-section-form__btn">Sign Up</button>
+            </form>
+        </section>
     </main>
-    
+    <footer class="footer">
+        <ul class="footer-ul fixed-width-layout">
+            <li class="footer-ul__item footer__luxura-logo-socials">
+                <a href="" class="garamond-title no-hyperlink brand-logo text-color--white footer__luxura-link">LUXURA</a>
+                <section aria-label="social medias" class="footer__social-links">
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-discord"></i></a>
+                </section>
+            </li>
+            <li class="footer-ul__item">
+                <h3 href="" class="garamond-title no-hyperlink brand-logo text-color--white footer-item__heading">Explore Luxura</h3>
+                <section aria-label="social medias" class="footer__main-links montserrat-paragraph">
+                    <a href="">Home</a>
+                    <a href="">Shop All Collections</a>
+                    <a href="">Explore Finest Works</a>
+                    <a href="">Exclusive Services</a>
+                </section>
+            </li>
+            <li class="footer-ul__item">
+                <h3 href="" class="garamond-title no-hyperlink brand-logo text-color--white footer-item__heading">Our Services</h3>
+                <section aria-label="social medias" class="footer__main-links montserrat-paragraph">
+                    <a href="">Personal Styling</a>
+                    <a href="">Custom Tailoring & Bespoke Designs</a>
+                    <a href="">Makeup Artistry</a>
+                    <a href="">Fashion Photography</a>
+                    <a href="">Red Carpet Ready Packages</a>
+                </section>
+            </li>
+            <li class="footer-ul__item">
+                <h3 href="" class="garamond-title no-hyperlink brand-logo text-color--white footer-item__heading">Legal & Policies</h3>
+                <section aria-label="social medias" class="footer__main-links montserrat-paragraph">
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms of Service</a>
+                    <a href="">Shipping & Returns</a>
+                </section>
+            </li>
+            <li class="footer-ul__item">
+                <h3 href="" class="garamond-title no-hyperlink brand-logo text-color--white footer-item__heading">Download Our App</h3>
+                <section aria-label="social medias" class="footer__main-links">
+                    <a href="">Privacy Policy</a>
+                </section>
+            </li>
+        </ul>
+    </footer>
 
 
     <script src="./script.js"></script>

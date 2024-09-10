@@ -10,9 +10,9 @@
 
     /* ================ if web is white color =============== */
     --text-color-pure-black: black;
-    --text-color-ver-2: hsl(0, 0%, 9%);
-    --text-color-ver-3: hsl(0, 0%, 15%);
-    --text-color-ver-4: hsl(0, 0%, 19%);
+    --text-color-pure-black-ver-2: hsl(0, 0%, 9%);
+    --text-color-pure-black-ver-3: hsl(0, 0%, 15%);
+    --text-color-pure-black-ver-4: hsl(0, 0%, 41%);
 }
 
 /* =================================== displays ==================================== */
@@ -44,7 +44,6 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-size: clamp(.5rem, 5vw, .9rem);
   letter-spacing: .8px;
 }
 
@@ -68,6 +67,14 @@
 
 .text-color--dark {
     color: var(--text-color-pure-black);
+}
+
+.text-color--dark-2 {
+    color: var(--text-color-pure-black-ver-4);
+}
+
+.text-color--white-2 {
+    color: var(--text-color-white-ver-2);
 }
 
 /* =================================== Layout ===================================== */
@@ -94,6 +101,12 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* =================== Buttons ===================== */
+.button--effect-pointer {
+    cursor: pointer;
+}
+
 
 /* =================== Unique-Grids ===================== */
 
@@ -160,7 +173,17 @@
     text-decoration: none;
 }
 
-/* ================================== Lists and links =========================================== */
+/* ================================== responsive-images =========================================== */
+
+.image-is--responsive {
+    width: 100%;
+    height: auto;
+    border: 1px solid blue
+}
+
+.div--spacing {
+    height: 90px
+}
 
 
 
