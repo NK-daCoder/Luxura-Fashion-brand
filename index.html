@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/stylesheet/style.css"/>
     <link rel="stylesheet" href="./assets/stylesheet/utility.css"/>
+    <link rel="stylesheet" href="./assets/stylesheet/form-registration.css"/>
     <title>Luxura</title>
 </head>
 <body>
@@ -17,7 +18,6 @@
                 <ul class="nav__ul-two text-color--white ul--list-style--no-hyperlink montserrat-paragraph navigation-background--default" id="main-nav__ul">
                     <li><a href="#our-story" class="text-color--white" id="nav-link-item">Our Story</a></li>
                     <li><a href="#meet-the-team" class="text-color--white" id="main__nav-link-item">Our Team</a></li>
-                    <li><a href="" class="text-color--white" id="main__nav-link-item">Our Shop</a></li>
                     <li><a href="#our-services" class="text-color--white" id="main__nav-link-item">Our Services</a></li>
                 </ul>
             </nav>
@@ -26,17 +26,82 @@
                     <li>
                         <a href="">
                             <img src="./assets/images/icons/shopping-cart.svg" alt="" class="sign-up"/>
-                        </a>
+                        </a href="">
                     </li>
                     <li>
-                        <a href="">
-                            <img src="./assets/images/icons/user-login-white.svg" alt="" class="sign-up"/>
-                        </a>
+                        <button class="sign-up__button">
+                            <img src="./assets/images/icons/user-login-white.svg" alt="" class="sign-up" id="sign-up-button"/>
+                        </button>
                     </li>
                 </ul>
             </nav>
         </nav>
     </header>
+
+
+    <!-- forms for registration -->
+    <section class="form-container display-hidden" id="form-section">
+        <!-- Registration From -->
+        <form class="form-container__section fixed-width-layout" id="registration-form">  
+            <fieldset class="form-container__form">
+                <button class="form-cancle-button" id="cancle-button" aria-label="cancle button">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <h1 class="form-container-form__header garamond-title">Register</h1>
+                <label for="user-name-input" class="montserrat-paragraph">User Name</label>
+                <input id="user-name-input" type="text" required/>
+                <label for="email-input" class="montserrat-paragraph">Email</label>
+                <input id="email-input" type="email" required/>
+                <label for="password" class="montserrat-paragraph">Password 4-10 characters</label>
+                <input id="password" type="password" required/>
+                <label class="montserrat-paragraph sign-up-label--padding-bottom" for="sign-up-as">Sign Up As</label>
+                <select id="form-users-choice" class="form-container-form__selection">
+                    <option value="">Please Select an Option</option>
+                    <option class="montserrat-paragraph">
+                        Administrator
+                    </option>
+                    <option class="montserrat-paragraph">
+                        Customer
+                    </option>
+                </select>
+                <button type="submit" class="montserrat-paragraph our-finest-works-ul-card__btn" id="register-button">Submit</button>
+                <p class="montserrat-paragraph form-container__paragraph">Already have an account: <a href="#login-form" id="login-link">Login</a></p>
+                <section class="form-demo-section form-container__paragraph">
+                    <h3 class="montserrat-paragraph demo-section__heading">Demo:</h3>
+                    <p class="montserrat-paragraph">User Name: David</p>
+                    <p class="montserrat-paragraph">Email: test123@gmail.com</p>
+                    <p class="montserrat-paragraph">Password: 12345</p>
+                </section>
+            </fieldset>
+        </form>
+
+        <!-- Login From -->
+        <form class="form-container__section fixed-width-layout display-hidden" id="login-form">
+            <fieldset class="form-container__form">
+                <button class="form-cancle-button" id="cancle-button-login" aria-label="cancle button">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <h1 class="form-container-form__header garamond-title">Login</h1>
+                <label for="email-input" class="montserrat-paragraph">User Name</label>
+                <input id="email-input" type="text" required/>
+                <label for="password" class="montserrat-paragraph">Password</label>
+                <input id="password" type="password" required/>
+                <label>What You Want to login as</label>
+                <select id="form-users-choice">
+                    <option>Please Select an Option</option>
+                    <option class="montserrat-paragraph">
+                        Administrator
+                    </option>
+                    <option class="montserrat-paragraph">
+                        Customer
+                    </option>
+                </select>
+                <button type="submit" class="montserrat-paragraph our-finest-works-ul-card__btn">Submit</button>
+                <p class="montserrat-paragraph">Don't have an account <a href="">Register</a></p>
+            </fieldset>
+        </form>
+
+    </section>
 
     <main class="main">
         <section class="hero-section" id="hero-section">
@@ -225,11 +290,33 @@
         </section>
         <div class="div--spacing"></div>
         <section class="news-letter-section">
-            <form class="fixed-width-layout news-letter-section__form">
+            <form class="fixed-width-layout news-letter-section__form" id="sign-up-newsletter-form">
                 <label for="news-letter" class="garamond-title news-letter-section-form__label">Sign Up to our newsletter</label>
                 <input id="news-letter" type="email" placeholder="Email" class="news-letter-section-form__input"/>
 
                 <button type="submit" class="our-finest-works-ul-card__btn news-letter-section-form__btn">Sign Up</button>
+            </form>
+
+            <form class="fixed-width-layout create-news-letter-form create-news-letter-form--flex-center display-hidden" id="create-newsletter-form">
+                <fieldset class="form-fieldset--block">
+                    <img src="./assets/images/login/login.jpg" class="image--resize" alt="image of a beautiful blond lady displaying makeup"/>
+                    <section class="form-create-newsletter-section">
+                        <h1 class="garamond-title create-form__heading">Create A News Letter</h1>
+                        <fieldset>
+                            <label for="news-letter-headline" class="montserrat-paragraph">HeadLine Name: </label>
+                            <input id="news-letter-headline" class="montserrat-paragraph"/>
+                        </fieldset>
+                        <fieldset>
+                            <label for="news-letter-author-name" class="montserrat-paragraph">Author Name: </label>
+                            <input id="news-letter-author-name" class="montserrat-paragraph" />
+                        </fieldset>
+                        <fieldset>
+                            <label for="news-letter-text-area" class="montserrat-paragraph">News Letter Article:</label>
+                            <textarea id="news-letter-text-area" class="montserrat-paragraph"></textarea>
+                        </fieldset>
+                        <button type="submit" class="our-finest-works-ul-card__btn news-letter-section-form__btn">Submit</button>
+                    </section>
+                </fieldset>
             </form>
         </section>
     </main>
@@ -273,7 +360,7 @@
             </li>
             <li class="footer-ul__item">
                 <h3 href="" class="garamond-title no-hyperlink brand-logo text-color--white footer-item__heading">Download Our App</h3>
-                <section aria-label="social medias" class="footer__main-links">
+                <section aria-label="social medias" class="footer__main-links montserrat-paragraph">
                     <a href="">Privacy Policy</a>
                 </section>
             </li>
