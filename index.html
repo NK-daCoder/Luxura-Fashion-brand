@@ -44,16 +44,16 @@
         <!-- Registration From -->
         <form class="form-container__section fixed-width-layout" id="registration-form">  
             <fieldset class="form-container__form">
-                <button class="form-cancle-button" id="cancle-button" aria-label="cancle button">
+                <button type="button" class="form-cancle-button" id="cancel-button" aria-label="cancle button">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
                 <h1 class="form-container-form__header garamond-title">Register</h1>
-                <label for="user-name-input" class="montserrat-paragraph">User Name</label>
-                <input id="user-name-input" type="text" required/>
-                <label for="email-input" class="montserrat-paragraph">Email</label>
-                <input id="email-input" type="email" required/>
-                <label for="password" class="montserrat-paragraph">Password 4-10 characters</label>
-                <input id="password" type="password" required/>
+                <label for="register-user-name-input" class="montserrat-paragraph">User Name:</label>
+                <input id="register-user-name-input" type="text" required/>
+                <label for="register-email-input" class="montserrat-paragraph">Email:</label>
+                <input id="register-email-input" type="email" required/>
+                <label for="register-password" class="montserrat-paragraph">Password 4-10 characters:</label>
+                <input id="register-password" type="password" required/>
                 <label class="montserrat-paragraph sign-up-label--padding-bottom" for="sign-up-as">Sign Up As</label>
                 <select id="form-users-choice" class="form-container-form__selection">
                     <option value="">Please Select an Option</option>
@@ -78,17 +78,19 @@
         <!-- Login From -->
         <form class="form-container__section fixed-width-layout display-hidden" id="login-form">
             <fieldset class="form-container__form">
-                <button class="form-cancle-button" id="cancle-button-login" aria-label="cancle button">
+                <button type="button" class="form-cancle-button" id="cancel-button-login" aria-label="cancle button">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
                 <h1 class="form-container-form__header garamond-title">Login</h1>
-                <label for="email-input" class="montserrat-paragraph">User Name</label>
-                <input id="email-input" type="text" required/>
-                <label for="password" class="montserrat-paragraph">Password</label>
-                <input id="password" type="password" required/>
-                <label>What You Want to login as</label>
-                <select id="form-users-choice">
-                    <option>Please Select an Option</option>
+                <label for="login-user-name-input" class="montserrat-paragraph">User Name:</label>
+                <input id="login-user-name-input" type="text" required/>
+                <label for="login-email-input" class="montserrat-paragraph">Email:</label>
+                <input id="login-email-input" type="email" required/>
+                <label for="login-password" class="montserrat-paragraph">Password 4-10 characters:</label>
+                <input id="login-password" type="password" required/>
+                <label class="montserrat-paragraph sign-up-label--padding-bottom" for="sign-up-as">Login As</label>
+                <select id="form-users-choice" class="form-container-form__selection">
+                    <option value="">Please Select an Option</option>
                     <option class="montserrat-paragraph">
                         Administrator
                     </option>
@@ -96,8 +98,14 @@
                         Customer
                     </option>
                 </select>
-                <button type="submit" class="montserrat-paragraph our-finest-works-ul-card__btn">Submit</button>
-                <p class="montserrat-paragraph">Don't have an account <a href="">Register</a></p>
+                <button type="submit" class="montserrat-paragraph our-finest-works-ul-card__btn" id="login-button">Submit</button>
+                <p class="montserrat-paragraph form-container__paragraph">Already have an account: <a href="#registration-form" id="registration-link">Register Now</a></p>
+                <section class="form-demo-section form-container__paragraph">
+                    <h3 class="montserrat-paragraph demo-section__heading">Demo:</h3>
+                    <p class="montserrat-paragraph">User Name: David</p>
+                    <p class="montserrat-paragraph">Email: test123@gmail.com</p>
+                    <p class="montserrat-paragraph">Password: 12345</p>
+                </section>
             </fieldset>
         </form>
 
