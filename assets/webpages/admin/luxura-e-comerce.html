@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxura | E-commerce Admin</title>
+    <link rel="stylesheet" href="../e-commerce.css"/>
+    <link rel="stylesheet" href="../../../assets/stylesheet/utility.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+</head>
+<body class="body--background--grey">
+    <header class="admin-header">
+        <nav>
+            <ul class="admin-header-nav__ul">
+                <div class="logo-divider">
+                    <a href="../../../index.html" class="garamond-title no-hyperlink logo text-alignment--center text-color--dark">Luxura</a>
+                </div>
+                <li class="flex--col montserrat-paragraph">
+                    <h1 class="nav-ul-heading--margin-top font-size--sm font-color--white">
+                        Dashboard
+                    </h1>
+                    <button class="nav-ul-li__button montserrat-paragraph current-page">
+                        <img src="../../images/icons/shopping-cart-black.svg" aria-label="" alt="" class="nav-btn__icon"/>
+                        Analytics
+                    </button>
+                </li>
+                <li class="flex--col montserrat-paragraph">
+                    <h1 class="nav-ul-heading--margin-top font-size--sm font-color--white">Apps</h1>
+                    <button class="nav-ul-li__button montserrat-paragraph">
+                        <img src="../../images/icons/admin-commerce-order--black.svg" aria-label="" alt="" class="nav-btn__icon"/>
+                        Orders
+                    </button>
+                    <button class="nav-ul-li__button montserrat-paragraph">
+                        <img src="../../images/icons/admin-cart--black.svg" aria-label="" alt="" class="nav-btn__icon"/>
+                        Products
+                    </button>
+                    <button class="nav-ul-li__button montserrat-paragraph">
+                        <img src="../../images/icons/admin-employees-black.svg" aria-label="" alt="" class="nav-btn__icon"/>
+                        Employees
+                    </button>
+                    <button class="nav-ul-li__button montserrat-paragraph">
+                        <img src="../../images/icons/admin-customer--black.svg" aria-label="" alt="" class="nav-btn__icon"/>
+                        Recruitment
+                    </button>
+                    <button class="nav-ul-li__button montserrat-paragraph">
+                        <img src="../../images/icons/admin-calander--black.svg" aria-label="" alt="" class="nav-btn__icon"/>
+                        Calender
+                    </button>
+                    <button class="nav-ul-li__button montserrat-paragraph">
+                        <img src="../../images/icons/news-letter--black.svg" aria-label="" alt="" class="nav-btn__icon"/>
+                        News Letter
+                    </button>
+                </li>
+                <li class="flex--col montserrat-paragraph">
+                    <h1 class="nav-ul-heading--margin-top font-size--sm font-color--white">Pages</h1>
+                    
+                    <button class="nav-ul-li__button montserrat-paragraph">
+                        <img src="../../images/icons/admin-settings--black.svg" aria-label="" alt="" class="nav-btn__icon"/>
+                        Settings
+                    </button>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="flex--col montserrat-paragraph">
+                    <button class="nav-ul-li__button montserrat-paragraph">
+                        <img src="../../images/icons/admin-log-out--black.svg" aria-label="" alt="" class="nav-btn__icon"/>
+                        Log Out
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="admin-main">
+        <section class="admin-main__dashBoard-one">
+            <article class="admin-main-dashboard__top pad--2em">
+                <h1 class="montserrat-paragraph dashbord-heading">Dashboard</h1>
+                <div role="cell" class="admin-dashboard__profile">
+                    <input type="search" placeholder="Search..."/>
+                    <button class="material-symbols-outlined">
+                        notifications
+                    </button>
+                    <button class="material-symbols-outlined">
+                        account_circle
+                    </button>  
+                </div>
+            </article>
+            <nav class="flex-align-all--center-space-between dashboard-one__nav">
+                <ul class="admin-dashboard-nav__ul gap-1em montserrat-paragraph flex-row ul--list-style--no-hyperlink">
+                    <li>
+                        <button class="button-font--sm button--effect-pointer montserrat-paragraph">Last 24 hours</button>
+                    </li>
+                    <li>
+                        <button class="button-font--sm button--effect-pointer montserrat-paragraph">Last Week</button>
+                    </li>
+                    <li>
+                        <button class="button-font--sm button--effect-pointer montserrat-paragraph">Last Month</button>
+                    </li>
+                    <li>
+                        <button class="button-font--sm button--effect-pointer montserrat-paragraph">Last Year</button>
+                    </li>
+                </ul>
+                <button class="montserrat-paragraph button-font--sm filter__btn">Filter by data range ></button>
+            </nav>
+
+            <ul class="admin-dashboard-section__one flex-row gap-1em">
+                <li class="card flex-row gap--1-1em flex--align-all-center">
+                    <section class="montserrat-paragraph gap--1-4 flex--col">
+                        <h1 class=" font-size--sm flex--align-all-center gap-1em font-weight-500">
+                            <span class="material-symbols-outlined revenu-icon card-icon icon-color--blue">money_bag</span>
+                            Total Revenue
+                        </h1>
+                        <h2 class="font-size--title">R0.00</h2>
+                    </section>
+                    
+                    <section class="admin-dashboard__went-up-stats font-size--sm flex--col flex--align-all-center montserrat-paragraph gap--1em">
+                        <h3 class="flex--align-all-center"><span class="material-symbols-outlined">trending_up</span>
+                            0%
+                        </h3>
+                        <p class="font-size--sm text-alignment--center">last 7 days</p>
+                    </section>
+                    
+                </li>
+                <li class="card flex-row gap--1-1em flex--align-all-center">
+                    <section class="montserrat-paragraph gap--1-4 flex--col">
+                        <h1 class=" font-size--sm flex--align-all-center gap-1em font-weight-500">
+                            <span class="material-symbols-outlined revenu-icon card-icon icon-color--blue">group</span>
+                            Total Customers
+                        </h1>
+                        <h2 class="font-size--title">0</h2>
+                    </section>
+                    
+                    <section class="admin-dashboard__went-up-stats font-size--sm flex--col flex--align-all-center montserrat-paragraph gap--1em">
+                        <h3 class="flex--align-all-center"><span class="material-symbols-outlined">trending_up</span>
+                            0%
+                        </h3>
+                        <p class="font-size--sm text-alignment--center">last 7 days</p>
+                    </section>
+                    
+                </li>
+                <li class="card flex-row gap--1-1em flex--align-all-center">
+                    <section class="montserrat-paragraph gap--1-4 flex--col">
+                        <h1 class=" font-size--sm flex--align-all-center gap-1em font-weight-500">
+                            <span class="material-symbols-outlined revenu-icon card-icon icon-color--blue">payments</span>
+                            Total Transactions
+                        </h1>
+                        <h2 class="font-size--title">0</h2>
+                    </section>
+                    
+                    <section class="admin-dashboard__went-up-stats font-size--sm flex--col flex--align-all-center montserrat-paragraph gap--1em">
+                        <h3 class="flex--align-all-center"><span class="material-symbols-outlined">trending_up</span>
+                            0%
+                        </h3>
+                        <p class="font-size--sm text-alignment--center">last 7 days</p>
+                    </section>
+                    
+                </li>
+                <li class="card flex-row gap--1-1em flex--align-all-center">
+                    <section class="montserrat-paragraph gap--1-4 flex--col">
+                        <h1 class=" font-size--sm flex--align-all-center gap-1em font-weight-500">
+                            <span class="material-symbols-outlined revenu-icon card-icon icon-color--blue">shopping_cart_checkout</span>
+                            Products Sold
+                        </h1>
+                        <h2 class="font-size--title">0</h2>
+                    </section>
+                    
+                    <section class="admin-dashboard__went-up-stats font-size--sm flex--col flex--align-all-center montserrat-paragraph gap--1em">
+                        <h3 class="flex--align-all-center"><span class="material-symbols-outlined">trending_up</span>
+                            0%
+                        </h3>
+                        <p class="font-size--sm text-alignment--center">last 7 days</p>
+                    </section>
+                    
+                </li>
+            </ul>
+
+            <ul class="admin-dashboard-section__one ul--list-style--no-hyperlink unique-grid--1">
+                <li class="card">
+                    
+                </li>
+            </ul>
+
+
+            
+            
+        </section>
+
+    </main>
+    <script src="../e-commerce.js" defer></script>
+</body>
+</html>

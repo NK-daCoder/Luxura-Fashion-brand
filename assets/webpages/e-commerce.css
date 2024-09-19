@@ -1,0 +1,193 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --title-font-size: clamp(1rem, 5vw, 2rem);
+    --sub-font-size: clamp(.5rem, 2vw, .7rem);
+
+    --subfont-color: hsl(0, 0%, 61%);
+    --top-dashborad-border-color: hsl(0, 0%, 81%);
+    --content-fixed-width: 70em;
+}
+
+.font-size--title {
+    font-family: var(--title-font-size);
+}
+
+.font-size--sm {
+    font-size: var(--sub-font-size);
+}
+
+.font-color--white {
+    color: var(--subfont-color);
+}
+
+.extra--weight {
+    font-weight: 500;
+}
+
+/* ============================================ Admin-Dashboard-Nav ======================================================== */
+.body--background--grey {
+    background-color: hsl(0, 0%, 96%);
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+    grid-template-areas: 
+    "nav dashboard"
+    ;
+    
+}
+
+
+
+.admin-header {
+    height: 100vh;
+    grid-area: nav;
+    box-shadow: 0 0 2px 0 hsl(0, 0%, 87%);
+}
+
+.admin-header-nav__ul > li {
+    padding: 1em;
+}
+
+.nav-ul-heading--margin-top {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.logo {
+    display: block;
+    font-size: 1.5rem;
+    
+    padding: 1em;
+}
+
+.nav-ul-li__button {
+    background-color: hsla(0, 0%, 95%, 0);
+    transition: background-color 250ms ease-out;
+    
+    
+    padding: .7em;
+    text-align: left;
+    margin-top: .4em;
+    cursor: pointer;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: .5em;
+}
+
+.nav-ul-li__button:hover {
+    background-color: hsl(0, 0%, 93%);
+}
+
+.nav-btn__icon {
+    width: 19px;
+    height: 19px;
+    color: blue;
+}
+
+.logo-divider {
+    border-bottom: 1px solid var(--top-dashborad-border-color);
+}
+
+.logo-divider, .admin-main-dashboard-one__search, .admin-header {
+    background-color: white;
+}
+
+
+/* ============================================ Admin-Dashboard ======================================================== */
+
+.pad--2em {
+    padding: 1.6em;
+}
+
+.admin-main-dashboard__top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--top-dashborad-border-color);
+}
+
+.admin-dashboard__profile > input {
+    padding: .25em;
+    border: none;
+    border-bottom: 2px solid hsl(0, 0%, 47%);
+    background: none;
+    width: 100%;
+}
+
+
+.admin-dashboard__profile {
+    display: flex;
+    gap: 1em;
+}
+
+.admin-dashboard-nav__ul {
+    padding: 1em;
+}
+
+.admin-dashboard-nav__ul > li button {
+    background: none;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 255, 0);
+    color: hsla(240, 100%, 50%, 0);
+    padding-bottom: 0;
+    transition: padding-bottom .5s ease, color .5s ease;
+    color: var(--subfont-color);
+
+    
+}
+.admin-dashboard-nav__ul > li button:hover {
+    padding-bottom: .5em;
+    border-bottom: 2px solid blue;
+    color: hsla(234, 100%, 50%, 0.774);
+}
+
+/* ===================== actual dashboard ============================= */
+
+.filter__btn{
+    padding: 1em;
+}
+
+.dashboard-one__nav {
+    width: var(--content-fixed-width);
+    margin-inline: auto;
+}
+
+
+.admin-dashboard-section__one {
+    width: var(--content-fixed-width);
+    margin-inline: auto;
+    margin-top: 1em;
+    display: flex;
+
+}
+
+.admin-dashboard-section__one > .card {
+    padding: 1em 2em;
+}
+
+.card-icon {
+    border-radius: 50%;
+    padding: .1em;
+    font-weight: 800;
+}
+
+.admin-dashboard__went-up-stats {
+    color: green;
+}
+
+.icon-color--blue {
+    background-image: linear-gradient(hsl(240, 100%, 60%), hsl(216, 100%, 59%));
+    border: 1px solid hsl(212, 100%, 29%);
+    color: hsl(0, 0%, 100%);
+    text-shadow: 2px 2px 3px hsl(0, 0%, 9%);
+}
+
+
+
+/* ============================================ Customer ===================================================== */

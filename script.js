@@ -51,9 +51,20 @@ const mainFunctionality = () => {
     };
 
     // Attach event listeners to toggle form visibility
-    signUpButton.addEventListener("click", () => toggleForms("register"));
-    loginLink.addEventListener("click", () => toggleForms("login"));
-    registrationLink.addEventListener("click", () => toggleForms("register"));
+    signUpButton.addEventListener("click", () => {
+        registerForm.reset();
+        toggleForms("register")
+    });
+
+    loginLink.addEventListener("click", () => {
+        toggleForms("login");
+        loginForm.reset();
+    });
+    
+    registrationLink.addEventListener("click", () => {
+        registerForm.reset();
+        toggleForms("register");
+    });
 
     // Handle registration form submission
     registerForm.addEventListener("submit", (event) => {
@@ -74,7 +85,7 @@ const mainFunctionality = () => {
         const userPassword = loginUserInputPassword.value.trim();
         const userEmail = loginUserEmail.value.trim();
 
-        handleLogin(userName, userPassword, userEmail);
+        handleLogin(userPassword, userEmail);
         loginForm.reset(); // Clear the form after submission
     });
 
@@ -120,8 +131,8 @@ const mainFunctionality = () => {
     };
 
     // Handle login logic
-    const handleLogin = (name, password, email) => {
-        if (!name || !password || !email) {
+    const handleLogin = (password, email) => {
+        if (!password || !email) {
             alert("Please fill in both fields.");
             return;
         }

@@ -13,6 +13,10 @@
     --text-color-pure-black-ver-2: hsl(0, 0%, 9%);
     --text-color-pure-black-ver-3: hsl(0, 0%, 15%);
     --text-color-pure-black-ver-4: hsl(0, 0%, 41%);
+
+    --font-weight: 400;
+
+    --font-size-btn: clamp(0.5rem, 1vw + 0.2rem, .7rem);
 }
 
 /* =================================== displays ==================================== */
@@ -42,9 +46,9 @@
 .montserrat-paragraph {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: var(--font-weight);
   font-style: normal;
-  letter-spacing: .8px;
+  letter-spacing: .9px;
 }
 
 @font-face {
@@ -77,6 +81,22 @@
     color: var(--text-color-white-ver-2);
 }
 
+/* =================================== Weights ===================================== */
+.font-weight-800 {
+    --font-weight: 800;
+    font-weight: var(--font-weight);
+}
+
+.font-weight-500 {
+    --font-weight: 500;
+    font-weight: var(--font-weight);
+}
+
+/* =================================== Text Alignment ===================================== */
+.text-alignment--center {
+    text-align: center;
+}
+
 /* =================================== Layout ===================================== */
 
 .fixed-width-layout {
@@ -102,10 +122,23 @@
     }
 }
 
+.two-col-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 /* =================== Buttons ===================== */
 .button--effect-pointer {
     cursor: pointer;
 }
+
+.button-font--sm {
+    --font-weight: 500;
+    font-weight: var(--font-weight);
+    font-size: var(--font-size-btn);
+}
+
+/* =================== font-size ===================== */
 
 
 /* =================== Unique-Grids ===================== */
@@ -147,6 +180,16 @@
     }
 }
 
+.unique-grid--1 {
+    border: 1px solid hsl(0, 0%, 60%);
+    display: grid;
+}
+
+
+
+
+
+
 .flex--space-between {
     display: flex;
     justify-content: space-between;
@@ -161,6 +204,43 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.flex-align-all--center-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex--align-center-left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.gap-1em {
+    gap: 1em;
+}
+
+.gap--2em {
+    gap: 2em;
+}
+
+.gap--1-1em {
+    gap: 1.1em;
+}
+
+.gap--1-4 {
+    gap: .5em;
+}
+
+.flex--col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
 }
 
 /* ================================== Lists and links =========================================== */
@@ -178,7 +258,6 @@
 .image-is--responsive {
     width: 100%;
     height: auto;
-    border: 1px solid blue
 }
 
 .div--spacing {
@@ -189,6 +268,36 @@
 .image--resize {
     display: block;
     width: 100%;
+}
+
+.border-decore {
+    border-radius: 50%;
+    color: white;
+    background-color: hsl(192, 100%, 50%);
+    padding: .2em;
+}
+
+.border--right {
+    border-right: 1px solid hsl(0, 0%, 44%);
+}
+
+.border--top {
+    border-top: 1px solid hsl(0, 0%, 44%);
+}
+
+
+/* =================================== padding ========================================== */
+
+.padding-1em {
+    padding: 1em;
+}
+
+/* ======================================== Card ========================================= */
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 0 hsl(0, 0%, 87%);
 }
 
 /* =================================== Animations ===================================== */
