@@ -40,12 +40,10 @@
     
 }
 
-
-
 .admin-header {
     height: 100vh;
     grid-area: nav;
-    box-shadow: 0 0 2px 0 hsl(0, 0%, 87%);
+    border: 1px solid var(--top-dashborad-border-color);
 }
 
 .admin-header-nav__ul > li {
@@ -61,7 +59,7 @@
     display: block;
     font-size: 1.5rem;
     
-    padding: 1em;
+    padding: .9em;
 }
 
 .nav-ul-li__button {
@@ -115,7 +113,6 @@
 .admin-dashboard__profile > input {
     padding: .25em;
     border: none;
-    border-bottom: 2px solid hsl(0, 0%, 47%);
     background: none;
     width: 100%;
 }
@@ -138,9 +135,8 @@
     padding-bottom: 0;
     transition: padding-bottom .5s ease, color .5s ease;
     color: var(--subfont-color);
-
-    
 }
+
 .admin-dashboard-nav__ul > li button:hover {
     padding-bottom: .5em;
     border-bottom: 2px solid blue;
