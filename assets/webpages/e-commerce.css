@@ -11,6 +11,7 @@
     --subfont-color: hsl(0, 0%, 61%);
     --top-dashborad-border-color: hsl(0, 0%, 81%);
     --content-fixed-width: 70em;
+    --side-nav-background-color: hsl(0, 0%, 96%);
 }
 
 .font-size--title {
@@ -31,19 +32,26 @@
 
 /* ============================================ Admin-Dashboard-Nav ======================================================== */
 .body--background--grey {
-    background-color: hsl(0, 0%, 96%);
+    background-color: var(--side-nav-background-color);
     display: grid;
-    grid-template-columns: .1fr 1fr;
+    grid-template-columns: .89fr 1fr;
     grid-template-areas: 
-    "nav dashboard"
+    "side-nav main-content"
     ;
+    gap: 1em;
     
 }
 
 .admin-header {
-    height: 100vh;
-    grid-area: nav;
     border: 1px solid var(--top-dashborad-border-color);
+    overflow-y: auto;
+    grid-area: side-nav;
+    height: 100vh;
+}
+
+.admin-header-nav__ul {
+    position: relative;
+    margin-top: 6em;
 }
 
 .admin-header-nav__ul > li {
@@ -60,6 +68,7 @@
     font-size: 1.5rem;
     
     padding: .9em;
+    width: 100%;
 }
 
 .nav-ul-li__button {
@@ -91,6 +100,9 @@
 
 .logo-divider {
     border-bottom: 1px solid var(--top-dashborad-border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .logo-divider, .admin-main-dashboard-one__search, .admin-header {
@@ -99,6 +111,12 @@
 
 
 /* ============================================ Admin-Dashboard ======================================================== */
+
+.admin-main {
+    grid-area: main-content;
+    margin: 0 auto;
+    width: var(--content-fixed-width);
+}
 
 .pad--2em {
     padding: 1.6em;
@@ -157,10 +175,9 @@
 
 .admin-dashboard-section__one {
     width: var(--content-fixed-width);
-    margin-inline: auto;
-    margin-top: 1em;
-    display: flex;
 
+    margin: 1em auto;
+    display: flex;
 }
 
 .admin-dashboard-section__one > .card {
@@ -169,7 +186,7 @@
 
 .card-icon {
     border-radius: 50%;
-    padding: .1em;
+    padding: .15em;
     font-weight: 800;
 }
 
@@ -178,12 +195,16 @@
 }
 
 .icon-color--blue {
-    background-image: linear-gradient(hsl(240, 100%, 60%), hsl(216, 100%, 59%));
-    border: 1px solid hsl(212, 100%, 29%);
+    background-image: linear-gradient(hsl(216, 100%, 59%), hsl(240, 100%, 60%));
+   
     color: hsl(0, 0%, 100%);
     text-shadow: 2px 2px 3px hsl(0, 0%, 9%);
 }
 
+.wraper {
+    overflow-y: auto;
+    height: 45vh;
+}
 
 
 /* ============================================ Customer ===================================================== */
