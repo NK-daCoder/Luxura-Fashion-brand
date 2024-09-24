@@ -38,6 +38,14 @@
     }
 }
 
+.display-active {
+    display: block;
+}
+
+.display-disable {
+    display: none;
+}
+
 
 
 /* =================================== Font-Face ==================================== */
@@ -123,9 +131,16 @@
     }
 }
 
-.two-col-grid {
+.four-col-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 795px) {
+    .four-col-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* =================== Buttons ===================== */
@@ -148,8 +163,10 @@
     color: hsl(234, 100%, 50%);
 }
 
-/* =================== font-size ===================== */
-
+/* =================== Cursors ===================== */
+.pointer-cursor {
+    cursor: pointer;
+}
 
 /* =================== Unique-Grids ===================== */
 
@@ -335,6 +352,65 @@
 /* ========================================== Background =============================================== */
 .background--no-back {
     background: none;
+}
+
+/* ========================================== Tabels =============================================== */
+
+.table {
+    width: 100%;
+    background-color: white;
+}
+
+.table ,th , td{
+    border: 1px solid hsl(0, 0%, 60%);
+    padding: .5em;
+}
+
+.table-border--collapse {
+    border-collapse: collapse;
+}
+
+.table-profile-image {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    margin-right: 1em;
+}
+
+.grid-alig--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* =================================== Button ================================== */
+
+.table-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2em;
+    padding: .2em;
+    border-radius: 5px;
+    width: 9em;
+    margin-inline: auto;
+    margin-bottom: .5em;
+    text-shadow: 1px 1px 5px hsla(0, 0%, 0%, 0.637);
+}
+
+.delete-btn--color-red {
+    color: hsl(0, 0%, 100%);
+    background-image: linear-gradient(hsl(0, 100%, 67%), hsl(0, 100%, 37%));
+    border: 1px solid rgb(155, 0, 0);
+}
+
+.delete-btn--color-blue {
+    color: white;
+    background-image: linear-gradient(hsl(212, 98%, 63%), hsl(246, 100%, 39%));
+    border: 1px solid hsl(249, 100%, 50%);
+}
+
+.button-border-radius {
+    border-radius: 3em;
 }
 
 

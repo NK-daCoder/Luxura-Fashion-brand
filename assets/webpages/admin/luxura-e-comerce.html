@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
 </head>
-<body class="body--background--grey">
+<body class="body--background--grey body">
     <header class="admin-header" id="border-solid--left-white">
         <nav class="admin-navigation">
             <ul class="admin-header-nav__ul">
@@ -20,7 +20,7 @@
                     <h1 class="nav-ul-heading--margin-top font-size--sm font-color--white">
                         Dashboard
                     </h1>
-                    <button class="nav-ul-li__button montserrat-paragraph current-page">
+                    <button data-page="page-1" class="nav-ul-li__button montserrat-paragraph current-page dash-btn btn-styling--active">
                         <span class="material-symbols-outlined">
                             leaderboard
                         </span>
@@ -29,49 +29,55 @@
                 </li>
                 <li class="flex--col montserrat-paragraph">
                     <h1 class="nav-ul-heading--margin-top font-size--sm font-color--white">Apps</h1>
-                    <button class="nav-ul-li__button montserrat-paragraph">
+                    <button data-page="page-2" class="nav-ul-li__button montserrat-paragraph dash-btn">
                         <span class="material-symbols-outlined">
                             list_alt
                         </span>
                         Orders
                     </button>
-                    <button class="nav-ul-li__button montserrat-paragraph">
+                    <button data-page="page-3" class="nav-ul-li__button montserrat-paragraph dash-btn">
+                        <span class="material-symbols-outlined">
+                            menu_book
+                        </span>
+                        Bookings
+                    </button>
+                    <button data-page="page-4" class="nav-ul-li__button montserrat-paragraph dash-btn">
                         <span class="material-symbols-outlined">
                             work
                         </span>
                         Companies
                     </button>
-                    <button class="nav-ul-li__button montserrat-paragraph">
+                    <button data-page="page-5" class="nav-ul-li__button montserrat-paragraph dash-btn">
                         <span class="material-symbols-outlined">
                             inventory_2
                         </span>
                         Products
                     </button>
-                    <button class="nav-ul-li__button montserrat-paragraph">
+                    <button data-page="page-6" class="nav-ul-li__button montserrat-paragraph dash-btn">
                         <span class="material-symbols-outlined">
                             id_card
                         </span>
                         Employees
                     </button>
-                    <button class="nav-ul-li__button montserrat-paragraph">
+                    <button data-page="page-7" class="nav-ul-li__button montserrat-paragraph dash-btn">
                         <span class="material-symbols-outlined">
                             person_edit
                         </span>
                         Recruitment
                     </button>
-                    <button class="nav-ul-li__button montserrat-paragraph">
+                    <button data-page="page-8" class="nav-ul-li__button montserrat-paragraph dash-btn">
                         <span class="material-symbols-outlined">
                             calendar_month
                         </span>
                         Calender
                     </button>
-                    <button class="nav-ul-li__button montserrat-paragraph">
+                    <button data-page="page-9" class="nav-ul-li__button montserrat-paragraph dash-btn">
                         <span class="material-symbols-outlined">
                             newspaper
                         </span>
                         News Letter
                     </button>
-                    <button class="nav-ul-li__button montserrat-paragraph">
+                    <button class="nav-ul-li__button montserrat-paragraph dash-btn">
                         <span class="material-symbols-outlined">
                             report
                         </span>
@@ -80,13 +86,13 @@
                 </li>
                 <li class="flex--col montserrat-paragraph">
                     <h1 class="nav-ul-heading--margin-top font-size--sm font-color--white">Pages</h1>
-                    <button class="nav-ul-li__button montserrat-paragraph">
+                    <button class="nav-ul-li__button montserrat-paragraph dash-btn">
                         <span class="material-symbols-outlined">
                             description
                         </span>
                         How To
                     </button>
-                    <button class="nav-ul-li__button montserrat-paragraph">
+                    <button class="nav-ul-li__button montserrat-paragraph dash-btn">
                         <span class="material-symbols-outlined">
                             settings
                         </span>
@@ -97,7 +103,7 @@
 
             <ul>
                 <li class="flex--col montserrat-paragraph">
-                    <button class="nav-ul-li__button montserrat-paragraph">
+                    <button class="nav-ul-li__button montserrat-paragraph" id="dashboard-btn">
                         <span class="material-symbols-outlined">
                             logout
                         </span>
@@ -106,11 +112,11 @@
                 </li>
             </ul>
         </nav>
-
     </header>
 
     <main class="admin-main">
-        <section class="admin-main__dashBoard-one">
+        <!-- Dashboard -->
+        <section class="admin-main__dashBoard-one" id="page-1">
             <article class="admin-main-dashboard__top pad--2em">
                 <h1 class="montserrat-paragraph dashbord-heading">Dashboard</h1>
                 <div role="cell" class="admin-dashboard__profile">
@@ -138,7 +144,12 @@
                         <button class="button-font--sm button--effect-pointer montserrat-paragraph">Last Year</button>
                     </li>
                 </ul>
-                <button class="montserrat-paragraph button-font--sm filter__btn">Provide Dummy Data</button>
+                <button class="montserrat-paragraph button-font--sm filter__btn delete-btn--color-blue grid-alig--center pointer-cursor button-border-radius">
+                    <span class="material-symbols-outlined">
+                        database
+                    </span>
+                    Provide Data
+                </button>
             </nav>
 
             <section class="admin-dash-first-section">
@@ -214,26 +225,586 @@
                 </ul>
 
                 <ul class="admin-dashboard-section__one ul--list-style--no-hyperlink unique-grid--1">
-                    <li class="card unique-grid-item--area-1 admin-dashboard-chart">
-                        <h1 class="montserrat-paragraph text-alignment--center">Satisfied Sales</h1>
+                    <li class="card unique-grid-item--area-1 admin-dashboard-chart montserrat-paragraph">
+                        <h4 class="text-alignment--center">Expanses</h4>
                         <section class="wraper">
                             <canvas id="myChart" class="chart"></canvas>
                         </section>
-                        
                     </li>
-                    <li class="card card-1 unique-grid-item--area-2">
-                        
+                    <li class="card card-1 unique-grid-item--area-2 text-alignment--center montserrat-paragraph">
+                        <h4>Product Of The Year</h4>
                     </li>
-                </ul>   
+                </ul>
             </section>
-
-
-            
-            
         </section>
 
+        <!-- Orders -->
+        <section class="admin-main__dashBoard-one display-disable" id="page-2">
+            <article class="admin-main-dashboard__top pad--2em">
+                <h1 class="montserrat-paragraph dashbord-heading">Orders</h1>
+                <div role="cell" class="admin-dashboard__profile">
+                    <input type="search" placeholder="Search..." id="border-solid--bottom-white"/>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        notifications
+                    </button>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        account_circle
+                    </button>  
+                </div>
+            </article>
+            <section class="employees-section">
+                <table class="table table-border--collapse montserrat-paragraph">
+                    <thead class="text-alignment--center">
+                        <th><input type="checkbox"></th>
+                        <th>Picture</th>
+                        <th>Product Name</th>
+                        <th>Bar Code</th>
+                        <th>Description</th>
+                        <th>Product ID's</th>
+                        <th><button class="employees-section__add-btn pointer-cursor">
+                            <span class="material-symbols-outlined">
+                                add_circle
+                            </span>
+                        </button></th>
+                    </thead>
+                    <tbody class="font-size--sm">
+                        <tr class="text-alignment--center">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <img src="../../images/home-page/our-finest-works/purple-guy-removebg-preview.png" alt="a lady with yellow hair" aria-label="" class="table-product__image"/>
+                            </td>
+                            <td>
+                                Grotesk
+                            </td>
+                            <td>balinda@example.com</td>
+                            <td>Manager</td>
+                            <td>12345</td>
+                            <td>
+                                <button class="table-btn delete-btn--color-red pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Delete
+                                </button>
+                                <button class="table-btn delete-btn--color-blue pointer-cursor">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+                
+        </section>
+
+        <!-- Bookings -->
+        <section class="admin-main__dashBoard-one display-disable" id="page-3">
+            <article class="admin-main-dashboard__top pad--2em">
+                <h1 class="montserrat-paragraph dashbord-heading">Bookings</h1>
+                <div role="cell" class="admin-dashboard__profile">
+                    <input type="search" placeholder="Search..." id="border-solid--bottom-white"/>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        notifications
+                    </button>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        account_circle
+                    </button>  
+                </div>
+            </article>
+            <section class="employees-section">
+                <table class="table table-border--collapse montserrat-paragraph">
+                    <thead class="text-alignment--center">
+                        <th><input type="checkbox"></th>
+                        <th>Picture</th>
+                        <th>Product Name</th>
+                        <th>Bar Code</th>
+                        <th>Description</th>
+                        <th>Product ID's</th>
+                        <th><button class="employees-section__add-btn pointer-cursor">
+                            <span class="material-symbols-outlined">
+                                add_circle
+                            </span>
+                        </button></th>
+                    </thead>
+                    <tbody class="font-size--sm">
+                        <tr class="text-alignment--center">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <img src="../../images/home-page/our-finest-works/purple-guy-removebg-preview.png" alt="a lady with yellow hair" aria-label="" class="table-product__image"/>
+                            </td>
+                            <td>
+                                Grotesk
+                            </td>
+                            <td>balinda@example.com</td>
+                            <td>Manager</td>
+                            <td>12345</td>
+                            <td>
+                                <button class="table-btn delete-btn--color-red pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Delete
+                                </button>
+                                <button class="table-btn delete-btn--color-blue pointer-cursor">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+                
+        </section>
+
+        <!-- Companies -->
+        <section class="admin-main__dashBoard-one display-disable" id="page-4">
+            <article class="admin-main-dashboard__top pad--2em">
+                <h1 class="montserrat-paragraph dashbord-heading">Companies</h1>
+                <div role="cell" class="admin-dashboard__profile">
+                    <input type="search" placeholder="Search..." id="border-solid--bottom-white"/>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        notifications
+                    </button>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        account_circle
+                    </button>  
+                </div>
+            </article>
+            <section class="employees-section">
+                <table class="table table-border--collapse montserrat-paragraph">
+                    <thead class="text-alignment--center">
+                        <th><input type="checkbox"></th>
+                        <th>Logo</th>
+                        <th>Company Logo</th>
+                        <th>Emails</th>
+                        <th>Role</th>
+                        <th>Company Tel.</th>
+                        <th><button class="employees-section__add-btn pointer-cursor">
+                            <span class="material-symbols-outlined">
+                                add_circle
+                            </span>
+                        </button></th>
+                    </thead>
+                    <tbody class="font-size--sm">
+                        <tr class="text-alignment--center">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td class="grid-alig--center">
+                                <img src="../../images/home-page/meet-the-team/balinda.jpeg" alt="" aria-label="" class="table-profile-image"/>
+                                Balinda
+                            </td>
+                            <td>
+                                Grotesk
+                            </td>
+                            <td>balinda@example.com</td>
+                            <td>Manager</td>
+                            <td>12345</td>
+                            <td>
+                                <button class="table-btn delete-btn--color-red pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Delete
+                                </button>
+                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        description
+                                    </span>
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+                
+        </section>
+
+        <!-- Products -->
+        <section class="admin-main__dashBoard-one display-disable" id="page-5">
+            <article class="admin-main-dashboard__top pad--2em">
+                <h1 class="montserrat-paragraph dashbord-heading">Products</h1>
+                <div role="cell" class="admin-dashboard__profile">
+                    <input type="search" placeholder="Search..." id="border-solid--bottom-white"/>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        notifications
+                    </button>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        account_circle
+                    </button>  
+                </div>
+            </article>
+            <section class="employees-section">
+                <table class="table table-border--collapse montserrat-paragraph">
+                    <thead class="text-alignment--center">
+                        <th><input type="checkbox"></th>
+                        <th>Picture</th>
+                        <th>Product Name</th>
+                        <th>Bar Code</th>
+                        <th>Description</th>
+                        <th>Product ID's</th>
+                        <th><button class="employees-section__add-btn pointer-cursor">
+                            <span class="material-symbols-outlined">
+                                add_circle
+                            </span>
+                        </button></th>
+                    </thead>
+                    <tbody class="font-size--sm">
+                        <tr class="text-alignment--center">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td>
+                                <img src="../../images/home-page/our-finest-works/purple-guy-removebg-preview.png" alt="a lady with yellow hair" aria-label="" class="table-product__image"/>
+                            </td>
+                            <td>
+                                Grotesk
+                            </td>
+                            <td>balinda@example.com</td>
+                            <td>Manager</td>
+                            <td>12345</td>
+                            <td>
+                                <button class="table-btn delete-btn--color-red pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Delete
+                                </button>
+                                <button class="table-btn delete-btn--color-blue pointer-cursor">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+                
+        </section>
+
+        <!-- Employees -->
+        <section class="admin-main__dashBoard-one display-disable" id="page-6">
+            <article class="admin-main-dashboard__top pad--2em">
+                <h1 class="montserrat-paragraph dashbord-heading">Employees</h1>
+                <div role="cell" class="admin-dashboard__profile">
+                    <input type="search" placeholder="Search..." id="border-solid--bottom-white"/>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        notifications
+                    </button>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        account_circle
+                    </button>  
+                </div>
+            </article>
+            <section class="employees-section">
+                <table class="table table-border--collapse montserrat-paragraph">
+                    <thead class="text-alignment--center">
+                        <th><input type="checkbox"></th>
+                        <th>Names</th>
+                        <th>Surenames</th>
+                        <th>Emails</th>
+                        <th>Role</th>
+                        <th>Employee ID's</th>
+                        <th><button class="employees-section__add-btn">
+                            <span class="material-symbols-outlined">
+                                add_circle
+                            </span>
+                        </button></th>
+                    </thead>
+                    <tbody class="font-size--sm">
+                        <tr class="text-alignment--center">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td class="grid-alig--center">
+                                <img src="../../images/home-page/meet-the-team/balinda.jpeg" alt="" aria-label="" class="table-profile-image"/>
+                                Balinda
+                            </td>
+                            <td>
+                                Grotesk
+                            </td>
+                            <td>balinda@example.com</td>
+                            <td>Manager</td>
+                            <td>12345</td>
+                            <td>
+                                <button class="table-btn delete-btn--color-red pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Delete
+                                </button>
+                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        description
+                                    </span>
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="text-alignment--center">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td class="grid-alig--center">
+                                <img src="../../images/home-page/meet-the-team/lawrence-roach.webp" alt="" aria-label="" class="table-profile-image"/>
+                                Lawrence
+                            </td>
+                            <td>
+                                Roach
+                            </td>
+                            <td>balinda@example.com</td>
+                            <td>Manager</td>
+                            <td>12345</td>
+                            <td>
+                                <button class="table-btn delete-btn--color-red pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Delete
+                                </button>
+                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        description
+                                    </span>
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="text-alignment--center">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td class="grid-alig--center">
+                                <img src="../../images/home-page/meet-the-team/Kollin-Carter.webp" alt="" aria-label="" class="table-profile-image"/>
+                                Kollin
+                            </td>
+                            <td>
+                                Carter
+                            </td>
+                            <td>balinda@example.com</td>
+                            <td>Manager</td>
+                            <td>12345</td>
+                            <td>
+                                <button class="table-btn delete-btn--color-red pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Delete
+                                </button>
+                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        description
+                                    </span>
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="text-alignment--center">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td class="grid-alig--center">
+                                <img src="../../images/home-page/meet-the-team/michael-burrows.jpeg" alt="" aria-label="" class="table-profile-image"/>
+                                Michael
+                            </td>
+                            <td>
+                                Burrows
+                            </td>
+                            <td>balinda@example.com</td>
+                            <td>Manager</td>
+                            <td>12345</td>
+                            <td>
+                                <button class="table-btn delete-btn--color-red pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Delete
+                                </button>
+                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        description
+                                    </span>
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="text-alignment--center">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td class="grid-alig--center">
+                                <img src="../../images/home-page/meet-the-team/priscilla-ono-make-up-artist.webp" alt="" aria-label="" class="table-profile-image"/>
+                                Priscilla
+                            </td>
+                            <td>
+                                Ono
+                            </td>
+                            <td>balinda@example.com</td>
+                            <td>Manager</td>
+                            <td>12345</td>
+                            <td>
+                                <button class="table-btn delete-btn--color-red pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Delete
+                                </button>
+                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        description
+                                    </span>
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="text-alignment--center">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td class="grid-alig--center">
+                                <img src="../../images/home-page/meet-the-team/peter.jpg" alt="" aria-label="" class="table-profile-image"/>
+                                Peter
+                            </td>
+                            <td>
+                                Ono
+                            </td>
+                            <td>balinda@example.com</td>
+                            <td>Manager</td>
+                            <td>12345</td>
+                            <td>
+                                <button class="table-btn delete-btn--color-red pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Delete
+                                </button>
+                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        description
+                                    </span>
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </section>
+            
+                
+        </section>
+
+        <!-- Recruitments -->
+        <section class="admin-main__dashBoard-one display-disable" id="page-7" style="display: none;">
+            <article class="admin-main-dashboard__top pad--2em">
+                <h1 class="montserrat-paragraph dashbord-heading">Recruitment</h1>
+                <div role="cell" class="admin-dashboard__profile">
+                    <input type="search" placeholder="Search..." id="border-solid--bottom-white"/>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        notifications
+                    </button>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        account_circle
+                    </button>  
+                </div>
+            </article>
+            <section class="employees-section">
+                <table class="table table-border--collapse montserrat-paragraph">
+                    <thead class="text-alignment--center">
+                        <th><input type="checkbox"></th>
+                        <th>Names</th>
+                        <th>Surenames</th>
+                        <th>Emails</th>
+                        <th>Role</th>
+                        <th>Employee ID's</th>
+                        <th><button class="employees-section__add-btn">
+                            <span class="material-symbols-outlined">
+                                add_circle
+                            </span>
+                        </button></th>
+                    </thead>
+                    <tbody class="font-size--sm">
+                        <tr class="text-alignment--center">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td class="grid-alig--center">
+                                <img src="../../images/home-page/meet-the-team/balinda.jpeg" alt="" aria-label="" class="table-profile-image"/>
+                                Balinda
+                            </td>
+                            <td>
+                                Grotesk
+                            </td>
+                            <td>balinda@example.com</td>
+                            <td>Manager</td>
+                            <td>12345</td>
+                            <td>
+                                <button class="table-btn delete-btn--color-red pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        delete
+                                    </span>
+                                    Delete
+                                </button>
+                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
+                                    <span class="material-symbols-outlined">
+                                        description
+                                    </span>
+                                    View CV
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+                
+        </section>
+
+        <!-- Calender -->
+        <section class="admin-main__dashBoard-one display-disable" id="page-8" style="display: none;">
+            <article class="admin-main-dashboard__top pad--2em">
+                <h1 class="montserrat-paragraph dashbord-heading">Task Calander</h1>
+                <div role="cell" class="admin-dashboard__profile">
+                    <input type="search" placeholder="Search..." id="border-solid--bottom-white"/>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        notifications
+                    </button>
+                    <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
+                        account_circle
+                    </button>  
+                </div>
+            </article>
+
+            <section class="dashboard-calender-section">
+                
+            </section>
+        </section>
+
+        <!-- Bookings -->
+        <!-- News Letter -->
+        <!-- Employees -->
+        <!-- Reports -->
+
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../e-commerce.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    
 </body>
 </html>

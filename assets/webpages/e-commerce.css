@@ -33,25 +33,17 @@
 /* ============================================ Admin-Dashboard-Nav ======================================================== */
 .body--background--grey {
     background-color: var(--side-nav-background-color);
-    display: grid;
-    grid-template-columns: .89fr 1fr;
-    grid-template-areas: 
-    "side-nav main-content"
-    ;
-    gap: 1em;
-    
 }
 
 .admin-header {
     border: 1px solid var(--top-dashborad-border-color);
     overflow-y: auto;
-    grid-area: side-nav;
     height: 100vh;
-}
-
-.admin-header-nav__ul {
-    position: relative;
-    margin-top: 6em;
+    width: 15vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .admin-header-nav__ul > li {
@@ -100,9 +92,6 @@
 
 .logo-divider {
     border-bottom: 1px solid var(--top-dashborad-border-color);
-    position: fixed;
-    top: 0;
-    left: 0;
 }
 
 .logo-divider, .admin-main-dashboard-one__search, .admin-header {
@@ -113,9 +102,14 @@
 /* ============================================ Admin-Dashboard ======================================================== */
 
 .admin-main {
-    grid-area: main-content;
-    margin: 0 auto;
+    height: 100vh;
+    position: relative;
+}
+
+.admin-main__dashBoard-one {
     width: var(--content-fixed-width);
+    margin-inline: auto;
+    padding-left: 8em;
 }
 
 .pad--2em {
@@ -163,19 +157,18 @@
 
 /* ===================== actual dashboard ============================= */
 
-.filter__btn{
-    padding: 1em;
+.filter__btn {
+    padding: .5em;
 }
 
 .dashboard-one__nav {
     width: var(--content-fixed-width);
     margin-inline: auto;
+    width: 100%;
 }
 
 
 .admin-dashboard-section__one {
-    width: var(--content-fixed-width);
-
     margin: 1em auto;
     display: flex;
 }
@@ -206,5 +199,36 @@
     height: 45vh;
 }
 
+.employees-section {
+    margin: 1em auto;
+}
+
+.btn-styling--active {
+    color: white;
+    border-radius: .5em;
+    background-image: linear-gradient(hsl(216, 100%, 59%), hsl(240, 100%, 60%));
+    text-shadow: 1px 1px 5px black;
+    transition: color .1s ease, background-image 1s ease;
+}
+
+.employees-section__add-btn {
+    color: white;
+    border-radius: 50%;
+    background: linear-gradient(hsl(216, 100%, 59%), hsl(240, 100%, 60%));
+    border: none;
+ 
+    width: 3em;
+    height: 3em;
+    margin-inline: auto;
+    
+    display: grid;
+    align-items: center;
+}
+
+.table-product__image {
+    width: 10em;
+    height: 10em;
+    display: block;
+}
 
 /* ============================================ Customer ===================================================== */
