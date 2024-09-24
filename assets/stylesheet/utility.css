@@ -228,6 +228,27 @@
     grid-area: area-3;
 }
 
+
+.grid-col-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 950px) {
+    .grid-col-4 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 760px) {
+    .grid-col-4 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
 .flex--space-between {
     display: flex;
     justify-content: space-between;
@@ -304,7 +325,7 @@
 
 /*  ================================== Responsive image =============================== */
 
-.image--resize {
+img {
     display: block;
     width: 100%;
 }
@@ -413,6 +434,9 @@
     border-radius: 3em;
 }
 
+.section-space {
+    margin-top: 2em;
+}
 
 /* =================================== Animations ===================================== */
 

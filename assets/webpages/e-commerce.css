@@ -223,12 +223,19 @@
     
     display: grid;
     align-items: center;
+
+    text-shadow: 1px 1px 4px black;
+    cursor: pointer;
 }
 
 .table-product__image {
     width: 10em;
     height: 10em;
     display: block;
+}
+
+.ul--padding {
+    padding: 1em; 
 }
 
 /* ============================================ Customer ===================================================== */

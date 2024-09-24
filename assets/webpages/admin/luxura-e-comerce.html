@@ -33,13 +33,13 @@
                         <span class="material-symbols-outlined">
                             list_alt
                         </span>
-                        Orders
+                        Inventory
                     </button>
                     <button data-page="page-3" class="nav-ul-li__button montserrat-paragraph dash-btn">
                         <span class="material-symbols-outlined">
                             menu_book
                         </span>
-                        Bookings
+                        Appointments
                     </button>
                     <button data-page="page-4" class="nav-ul-li__button montserrat-paragraph dash-btn">
                         <span class="material-symbols-outlined">
@@ -238,10 +238,10 @@
             </section>
         </section>
 
-        <!-- Orders -->
+        <!-- Stock Inventory -->
         <section class="admin-main__dashBoard-one display-disable" id="page-2">
             <article class="admin-main-dashboard__top pad--2em">
-                <h1 class="montserrat-paragraph dashbord-heading">Orders</h1>
+                <h1 class="montserrat-paragraph dashbord-heading">Inventory</h1>
                 <div role="cell" class="admin-dashboard__profile">
                     <input type="search" placeholder="Search..." id="border-solid--bottom-white"/>
                     <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
@@ -252,61 +252,53 @@
                     </button>  
                 </div>
             </article>
-            <section class="employees-section">
-                <table class="table table-border--collapse montserrat-paragraph">
-                    <thead class="text-alignment--center">
-                        <th><input type="checkbox"></th>
-                        <th>Picture</th>
-                        <th>Product Name</th>
-                        <th>Bar Code</th>
-                        <th>Description</th>
-                        <th>Product ID's</th>
-                        <th><button class="employees-section__add-btn pointer-cursor">
-                            <span class="material-symbols-outlined">
-                                add_circle
-                            </span>
-                        </button></th>
-                    </thead>
-                    <tbody class="font-size--sm">
-                        <tr class="text-alignment--center">
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                            <td>
-                                <img src="../../images/home-page/our-finest-works/purple-guy-removebg-preview.png" alt="a lady with yellow hair" aria-label="" class="table-product__image"/>
-                            </td>
-                            <td>
-                                Grotesk
-                            </td>
-                            <td>balinda@example.com</td>
-                            <td>Manager</td>
-                            <td>12345</td>
-                            <td>
-                                <button class="table-btn delete-btn--color-red pointer-cursor ">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                    Delete
-                                </button>
-                                <button class="table-btn delete-btn--color-blue pointer-cursor">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                    Edit
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            
-                
+
+            <ul class="grid-col-4 ul--list-style--no-hyperlink section-space gap-1em">
+                <li class="card">
+                    <img src="../../images/home-page/our-finest-works/purple-guy-removebg-preview.png" alt="" aria-label="" />
+                    <section class="ul--padding">
+                        <h2 class="text-alignment--center">The Gentle Mens</h2>
+                        <p>Description</p>
+                        <p>Current Price</p>
+                        <p>Current Bar Code</p>
+                    </section>
+                    <ul class="flex--space-between ul--list-style--no-hyperlink gap--1-4 ul-btn ul--padding">
+                        <li>
+                            <button class="table-btn delete-btn--color-red pointer-cursor ">
+                                <span class="material-symbols-outlined">
+                                    delete
+                                </span>
+                                Remove
+                            </button>
+                        </li>
+                        <li>
+                            <button class="table-btn delete-btn--color-blue pointer-cursor ">
+                                <span class="material-symbols-outlined">
+                                    description
+                                </span>
+                                Update
+                            </button>
+                        </li>
+                    </ul>
+                </li>
+                <li class="card">blue</li>
+                <li class="card">sky</li>
+                <li class="card">hey</li>
+                <li>
+                    <button class="employees-section__add-btn">
+                        <span class="material-symbols-outlined">
+                            add_circle
+                        </span>
+                    </button>
+                </li>
+            </ul>
+
         </section>
 
-        <!-- Bookings -->
+        <!-- Appointments -->
         <section class="admin-main__dashBoard-one display-disable" id="page-3">
             <article class="admin-main-dashboard__top pad--2em">
-                <h1 class="montserrat-paragraph dashbord-heading">Bookings</h1>
+                <h1 class="montserrat-paragraph dashbord-heading">Appointments</h1>
                 <div role="cell" class="admin-dashboard__profile">
                     <input type="search" placeholder="Search..." id="border-solid--bottom-white"/>
                     <button class="material-symbols-outlined background--no-back no-border button--effect-pointer icon-hover--color">
@@ -317,54 +309,6 @@
                     </button>  
                 </div>
             </article>
-            <section class="employees-section">
-                <table class="table table-border--collapse montserrat-paragraph">
-                    <thead class="text-alignment--center">
-                        <th><input type="checkbox"></th>
-                        <th>Picture</th>
-                        <th>Product Name</th>
-                        <th>Bar Code</th>
-                        <th>Description</th>
-                        <th>Product ID's</th>
-                        <th><button class="employees-section__add-btn pointer-cursor">
-                            <span class="material-symbols-outlined">
-                                add_circle
-                            </span>
-                        </button></th>
-                    </thead>
-                    <tbody class="font-size--sm">
-                        <tr class="text-alignment--center">
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                            <td>
-                                <img src="../../images/home-page/our-finest-works/purple-guy-removebg-preview.png" alt="a lady with yellow hair" aria-label="" class="table-product__image"/>
-                            </td>
-                            <td>
-                                Grotesk
-                            </td>
-                            <td>balinda@example.com</td>
-                            <td>Manager</td>
-                            <td>12345</td>
-                            <td>
-                                <button class="table-btn delete-btn--color-red pointer-cursor ">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                    Delete
-                                </button>
-                                <button class="table-btn delete-btn--color-blue pointer-cursor">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                    Edit
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            
                 
         </section>
 
@@ -521,6 +465,8 @@
                         <th>Surenames</th>
                         <th>Emails</th>
                         <th>Role</th>
+                        <th>Status</th>
+                        <th>Budget</th>
                         <th>Employee ID's</th>
                         <th><button class="employees-section__add-btn">
                             <span class="material-symbols-outlined">
@@ -542,6 +488,8 @@
                             </td>
                             <td>balinda@example.com</td>
                             <td>Manager</td>
+                            <td>Active</td>
+                            <td>53k</td>
                             <td>12345</td>
                             <td>
                                 <button class="table-btn delete-btn--color-red pointer-cursor ">
@@ -558,151 +506,7 @@
                                 </button>
                             </td>
                         </tr>
-                        <tr class="text-alignment--center">
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                            <td class="grid-alig--center">
-                                <img src="../../images/home-page/meet-the-team/lawrence-roach.webp" alt="" aria-label="" class="table-profile-image"/>
-                                Lawrence
-                            </td>
-                            <td>
-                                Roach
-                            </td>
-                            <td>balinda@example.com</td>
-                            <td>Manager</td>
-                            <td>12345</td>
-                            <td>
-                                <button class="table-btn delete-btn--color-red pointer-cursor ">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                    Delete
-                                </button>
-                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
-                                    <span class="material-symbols-outlined">
-                                        description
-                                    </span>
-                                    Edit
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="text-alignment--center">
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                            <td class="grid-alig--center">
-                                <img src="../../images/home-page/meet-the-team/Kollin-Carter.webp" alt="" aria-label="" class="table-profile-image"/>
-                                Kollin
-                            </td>
-                            <td>
-                                Carter
-                            </td>
-                            <td>balinda@example.com</td>
-                            <td>Manager</td>
-                            <td>12345</td>
-                            <td>
-                                <button class="table-btn delete-btn--color-red pointer-cursor ">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                    Delete
-                                </button>
-                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
-                                    <span class="material-symbols-outlined">
-                                        description
-                                    </span>
-                                    Edit
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="text-alignment--center">
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                            <td class="grid-alig--center">
-                                <img src="../../images/home-page/meet-the-team/michael-burrows.jpeg" alt="" aria-label="" class="table-profile-image"/>
-                                Michael
-                            </td>
-                            <td>
-                                Burrows
-                            </td>
-                            <td>balinda@example.com</td>
-                            <td>Manager</td>
-                            <td>12345</td>
-                            <td>
-                                <button class="table-btn delete-btn--color-red pointer-cursor ">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                    Delete
-                                </button>
-                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
-                                    <span class="material-symbols-outlined">
-                                        description
-                                    </span>
-                                    Edit
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="text-alignment--center">
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                            <td class="grid-alig--center">
-                                <img src="../../images/home-page/meet-the-team/priscilla-ono-make-up-artist.webp" alt="" aria-label="" class="table-profile-image"/>
-                                Priscilla
-                            </td>
-                            <td>
-                                Ono
-                            </td>
-                            <td>balinda@example.com</td>
-                            <td>Manager</td>
-                            <td>12345</td>
-                            <td>
-                                <button class="table-btn delete-btn--color-red pointer-cursor ">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                    Delete
-                                </button>
-                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
-                                    <span class="material-symbols-outlined">
-                                        description
-                                    </span>
-                                    Edit
-                                </button>
-                            </td>
-                        </tr>
-                        <tr class="text-alignment--center">
-                            <td>
-                                <input type="checkbox">
-                            </td>
-                            <td class="grid-alig--center">
-                                <img src="../../images/home-page/meet-the-team/peter.jpg" alt="" aria-label="" class="table-profile-image"/>
-                                Peter
-                            </td>
-                            <td>
-                                Ono
-                            </td>
-                            <td>balinda@example.com</td>
-                            <td>Manager</td>
-                            <td>12345</td>
-                            <td>
-                                <button class="table-btn delete-btn--color-red pointer-cursor ">
-                                    <span class="material-symbols-outlined">
-                                        delete
-                                    </span>
-                                    Delete
-                                </button>
-                                <button class="table-btn delete-btn--color-blue pointer-cursor ">
-                                    <span class="material-symbols-outlined">
-                                        description
-                                    </span>
-                                    Edit
-                                </button>
-                            </td>
-                        </tr>
+                        
                         
                     </tbody>
                 </table>
